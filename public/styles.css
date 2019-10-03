@@ -1,208 +1,340 @@
-/* jobs page */
-.allJobs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+body {
+    margin: 25px;
 }
 
-.jobData {
+.title {
+    font-size: 60px;
+}
+
+.center {
+    text-align: center;
+}
+
+.dropdown {
     width: 400px;
-    background-color: #ffff29;
-    border-style: solid;
-    margin: 10px;
+    height: 80px;
+    font-size: 35px;
+    background-color: white;
+    border-color: black;
+    border-width: 2px;
+}
+.berlin {
     font-size: 40px;
-    padding: 20px;
-}
-
-a:link, a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-.filtersbutton {
-    display: inline-block;
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 30px;
-    margin-top: 80px;
-}
-
-.filters {
-    /* margin: 50px; */
-    display: flex;
-}
-
-.filter {
-    height: 50px;
-    width: 200px;
-    font-size: 30px;
-    margin: 12px;
-}
-
-#createJob {
-    height: 100%;
-    width: 300px;
-    font-size: 30px;
-    margin-left: 120px;
-}
-
-.busca {
-    color: black;
-    font-size: 40px;
-    font-style: italic;
-}
-
-/* job details page */
-.jobDetails {
-    background-color: #ADFF2F;
-    margin: 50px;
-    padding: 20px;
-    margin-top: 200px;
-}
-
-.jobDetails p {
-    font-size: 10px;
-}
-
-.btn {
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    margin-right: 20px;
-    font-size: 76px;
-    cursor: pointer;
-    right: 0;
-    top: 0;
-    position: absolute;
-}
-
-/* job form */
-.formQuestions {
-    font-size: 40px;
-}
-
-.formInputs {
-    font-size: 50px;
-    width: 60%;
-    height: 60%;
-    margin-bottom: 35px;
-    border-style: solid;
-    border-width: medium;
-}
-
-.jobForm {
-    margin: 40px;
-    padding: 20px;
-}
-
-.radio {
-    width: 3em;
-    height: 3em;
-    margin-right: 25px;
-    margin-bottom: 30px;
-}
-
-#listo {
-    width: 50%;
-    height: 100px;
-    font-size: 50px;
-}
-
-/* confirm page */
-.jobConfirmPage {
-    margin: 40px;
-    padding: 20px;
-}
-
-.confirmButton {
-    width: 300px;
-    height: 100px;
-    font-size: 50px;
-    margin: 30px;
-}
-
-.confirmButtons {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-}
-
-.confirmText {
-    font-size: 45px;
-    margin-top: 50px;
-}
-
-td {
-    padding: 15px;
-}
-
-.confirmTitle {
-    margin-bottom: 100px;
-    font-size: 45px;
-}
-
-.modal {
-    transform: translate(-50%, -50%);
-    position: fixed;
-    background: DodgerBlue;
-    border-style: solid;
-    width: 80%;
-    height: 80%;
-    top: 50%;
-    left: 50%;
-    color: #ffffff;
-    display: flex;
-}
-
-.jobMoment {
-    font-size: 30px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    font-style: oblique;
 }
 
 label {
+    font-size: 45px;
+}
+
+.flex {
+    display: flex;
+}
+
+.titleAndLogin {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.login {
+}
+.dayDiv {
+    background-color: #01d28e;
+    padding: 40px;
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.day {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.text {
+    font-size: 45px;
+    color: black;
+}
+
+.eventDescription {
+    line-height: 50px;
+    vertical-align: baseline;
+}
+
+.descriptionAnswer {
+    word-break: break-all;
+}
+
+.eventsDiv {
+    margin-bottom: 70px;
+}
+
+.plusDiv {
+    font-size: 50px;
+    text-align: center;
+}
+
+.modal-header {
+    display: block;
+}
+
+.smallPlusDiv {
+    align-content: center;
+    margin-left: 20px;
+    font-size: 35px;
+}
+
+td {
+    min-width: 100px;
+}
+
+tr {
+    align-items: flex-start;
+}
+
+.dayAndPlus {
+    display: flex;
+}
+
+.signout {
+    text-align: right;
+}
+
+.welcome {
+    margin-top: 30px;
+}
+
+.date,
+.time {
+    width: 300px;
+    height: 100px;
     font-size: 30px;
 }
 
-/* Login & Registration Page */
+.repeatsDiv {
+    margin-top: 60px;
+    align-items: center;
+}
 
-.login-container {
+.week1,
+.week2 {
+    margin-top: 50px;
+}
+
+.eventLine {
+    display: flex;
+    align-items: center;
+}
+
+.repeatDropdown {
+    width: 100px;
+    height: 70px;
+    font-size: 40px;
+    margin: 20px;
     text-align: center;
 }
 
-.login-centering {
+.dateDropdown {
+    width: 150px;
+    height: 70px;
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+}
+
+.authText,
+.authTitle {
+    text-align: center;
+}
+
+.authText {
+    margin-bottom: 50px;
+}
+
+.euro {
+    height: 70px;
+    width: 35px;
+    font-size: 55px;
+    border-style: solid;
+    border-color: gray;
+    border-right: white;
+}
+.priceInput {
+    border: gray;
+    border-left: white;
+    font-size: 50px;
+    height: 70px;
+}
+
+.inputs {
+    width: 95%;
+    height: 70px;
+    font-size: 30px;
+    border-style: solid;
+}
+
+.inputDiv {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.description {
+    height: 200px;
+    border-style: solid;
+    border-color: black;
+}
+
+.radioButton {
+    height: 40px;
+    width: 40px;
+}
+
+.event {
+    width: 100%;
+}
+
+.button {
+    width: 400px;
+    height: 150px;
+    font-size: 40px;
+    background-color: #333;
+    color: white;
+}
+
+.facebookContainer {
+    margin-top: 120px;
+}
+
+#facebook-button {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 45px 80px;
+    background-image: -webkit-linear-gradient(#3b5998, #314b83);
     display: inline-block;
+    border-radius: 5px;
+    border: solid 1px #283e6b;
+    box-shadow: inset 0px 1px rgba(255, 255, 255, 0.2);
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.3s;
+    &:hover {
+        background-image: -webkit-linear-gradient(#4466ac, #34518e);
+    }
+    &:active {
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.3),
+            0px 1px rgba(255, 255, 255, 0.2);
+    }
 }
 
-.underline-link {
-    color: #365899;
-    cursor: pointer;
-    font-weight: normal;
-    font-size: 12px;
-    text-align: center;
-    padding-top: 6px;
-    padding-bottom: 6px;
+#gmail-button {
+    color: black;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 45px 80px;
+    background-image: -webkit-linear-gradient(cornsilk);
+    display: inline-block;
+    border-radius: 5px;
+    border: solid 1px #283e6b;
+    box-shadow: inset 0px 1px rgba(255, 255, 255, 0.2);
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.3s;
+    &:hover {
+        background-image: -webkit-linear-gradient(#4466ac, #34518e);
+    }
+    &:active {
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.3),
+            0px 1px rgba(255, 255, 255, 0.2);
+    }
 }
 
-.ta {
-    color: #777;
-    font-size: 11px;
-    width: 316px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
+@media (min-width: 1000px) {
+    ::placeholder {
+        font-size: 20px;
+    }
 
-.error {
-    color: red;
-    font-size: 24px;
-    animation: blinker 1s linear infinite;
-}
+    .inputDiv {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .inputs,
+    .date,
+    .time {
+        width: 40%;
+        height: 40px;
+    }
 
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+    .description {
+        height: 200px;
+    }
+    .week1,
+    .week2 {
+        width: 100%;
+        display: flex;
+    }
+
+    .eventsDiv {
+        line-height: 10px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .button {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+    label {
+        font-size: 20px;
+    }
+
+    .text,
+    .date,
+    .time {
+        font-size: 18px;
+    }
+
+    .dayDiv {
+        width: 50%;
+        height: 200px;
+        padding: 10px;
+        margin: 1px;
+    }
+
+    .dropdown {
+        width: 200px;
+        height: 60px;
+        font-size: 25px;
+        display: none;
+    }
+
+    .weeks {
+        /* width: auto; */
+    }
+
+    .smallPlusDiv {
+        font-size: 15px;
+    }
+
+    .modal {
+        /* top: 20%; */
+    }
+
+    .modal-dialog {
+        max-width: 900px;
+    }
 }

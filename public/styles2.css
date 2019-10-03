@@ -1,0 +1,25 @@
+@media (max-width: 1000px) {
+    .firebaseui-idp-text {
+        font-size: 44px;
+    }
+
+    .firebaseui-idp-button {
+        max-width: 600px;
+        width: 1300px;
+        padding: 20px 30px;
+        margin-bottom: 30px;
+    }
+
+    .firebaseui-container {
+        max-width: 1000px;
+    }
+
+    .firebaseui-idp-icon {
+        height: 33px;
+        width: 33px;
+    }
+
+    .week2Web {
+        display: none;
+    }
+}
