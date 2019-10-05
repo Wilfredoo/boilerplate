@@ -4,18 +4,14 @@ const compression = require("compression");
 const database = require("./database.js");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
-
 GoogleStrategy = require("passport-google-oauth20").Strategy;
 FacebookStrategy = require("passport-facebook").Strategy;
 
-let fbSecret;
 let callback_URL;
 if (process.env.FACEBOOK_SECRET !== undefined) {
     fbSecret = process.env.FACEBOOK_SECRET;
     callback_URL = process.env.CALLBACK_URL;
 } else {
-    let secrets = require("./secrets.json");
-    fbSecret = `${secrets.facebookSecret}`;
     callback_URL = "http://localhost:8080/facebook/callback";
 }
 
@@ -47,24 +43,24 @@ app.use(
     })
 );
 
-passport.use(
-    new FacebookStrategy(
-        {
-            clientID: 464372870817604,
-            clientSecret: fbSecret,
-            callbackURL: callback_URL
-        },
-        function(accessToken, refreshToken, profile, done) {
-            console.log("accessToken", accessToken);
-            console.log("refreshToken", refreshToken);
-            return database
-                .findOrCreateFacebookUser(profile.id, profile.displayName)
-                .then(user => {
-                    done(null, profile);
-                });
-        }
-    )
-);
+// passport.use(
+//     new FacebookStrategy(
+//         {
+//             clientID: 464372870817604,
+//             clientSecret: fbSecret,
+//             callbackURL: callback_URL
+//         },
+//         function(accessToken, refreshToken, profile, done) {
+//             console.log("accessToken", accessToken);
+//             console.log("refreshToken", refreshToken);
+//             return database
+//                 .findOrCreateFacebookUser(profile.id, profile.displayName)
+//                 .then(user => {
+//                     done(null, profile);
+//                 });
+//         }
+//     )
+// );
 
 // passport.use(
 //     new GoogleStrategy(
