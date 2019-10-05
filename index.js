@@ -138,7 +138,8 @@ app.post("/submitEvent", (req, res) => {
         .submitEvent(
             req.body.title,
             req.body.address,
-            req.body.hour,
+            req.body.starthour,
+            req.body.endhour,
             req.body.date0,
             req.body.date1,
             req.body.date2,

@@ -83,7 +83,7 @@ export class EventForm extends React.Component {
                 </div>
 
                 <div className="inputDiv">
-                    <p className="text">When is it?</p>
+                    <p className="text">What day is it?</p>
                     <Dates
                         handleChange={this.handleChange.bind(this)}
                         date={"date0"}
@@ -91,18 +91,31 @@ export class EventForm extends React.Component {
                     />
                     <br />
                     {/*<label for="time">Choose a time for your meeting:</label>*/}
-
+                    <p className="text">Event starts at</p>
                     <input
                         type="time"
                         id="time"
-                        name="hour"
+                        name="starthour"
                         min="10:00"
                         defaultValue="18:00"
                         max="23:00"
                         className="time"
                         onChange={this.handleChange}
                         required></input>
+
+                    <p className="text">And ends at</p>
+                    <input
+                        type="time"
+                        id="time"
+                        name="endhour"
+                        min="10:00"
+                        defaultValue="01:00"
+                        max="23:00"
+                        className="time"
+                        onChange={this.handleChange}
+                        required></input>
                 </div>
+
                 <div className="inputDiv">
                     <p className="text">Is this a continuous event?</p>
                     <label>

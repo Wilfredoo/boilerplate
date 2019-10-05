@@ -1,5 +1,4 @@
 DROP TABLE IF EXISTS calendar;
-DROP TABLE IF EXISTS users;
 
 CREATE TABLE calendar
 (
@@ -9,7 +8,8 @@ CREATE TABLE calendar
     (300),
     dancetype VARCHAR
     (255),
-    hour TIME,
+    starthour TIME,
+    endhour TIME,
     date0 DATE,
     date1 DATE,
     date2 DATE,
@@ -27,12 +27,9 @@ CREATE TABLE calendar
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE users
-(
-    id VARCHAR(100),
-    name VARCHAR(100) NOT NULL,
-    PRIMARY KEY (id)
-);
+
+
+
 
 INSERT INTO calendar
     (title, dancetype, hour, date0, date1, date2, date3, date4, date5, date6, repeats, address, description, cost, price)

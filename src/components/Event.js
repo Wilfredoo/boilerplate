@@ -29,13 +29,20 @@ export class Event extends React.Component {
         const { data } = this.props;
         console.log("where is time", this.props);
 
-        const dateToFormat = "1976-04-19T12:59-0500";
         return (
             <div className="event" onClick={e => this.expandEvent()}>
                 <div className="">
                     <div className="eventLine">
                         <p className="text eventText">
-                            <span className="time">{data.hour} - </span>
+                            <span className="time">
+                                <Moment
+                                    className="text"
+                                    parse="HH:mm:ss"
+                                    format="HH:mm">
+                                    {data.starthour}
+                                </Moment>
+                                -{" "}
+                            </span>
                             {data.title}{" "}
                         </p>
                         <div className="smallPlusDiv">
@@ -46,16 +53,29 @@ export class Event extends React.Component {
                     {expandEvent && (
                         <div className="hideInWeb">
                             <h2 className="eventTitle">{data.title}</h2>
-                            <Moment className="moment">{data.hour}</Moment>
-
                             <table className="text ">
                                 <tr className="text ">
-                                    <td className="text ">Wehere:</td>
+                                    <td className="text ">Where:</td>
                                     <td className="text ">{data.address}</td>
                                 </tr>
                                 <tr>
                                     <td className="text ">When:</td>
-                                    <td className="text ">{data.hour}</td>
+                                    <td>
+                                        {" "}
+                                        <Moment
+                                            className="text"
+                                            parse="HH:mm:ss"
+                                            format="HH:mm">
+                                            {data.starthour}
+                                        </Moment>{" "}
+                                        -{" "}
+                                        <Moment
+                                            className="text"
+                                            parse="HH:mm:ss"
+                                            format="HH:mm">
+                                            {data.endhour}
+                                        </Moment>
+                                    </td>{" "}
                                 </tr>
                                 <tr>
                                     <td className="text">About:</td>
@@ -81,13 +101,22 @@ export class Event extends React.Component {
                         <div className="hideInMobile">
                             <Modal.Dialog>
                                 <Modal.Header closeButton>
-                                    <Modal.Title> {data.title}</Modal.Title>
+                                    <Modal.Title>
+                                        {" "}
+                                        <Moment
+                                            className="text"
+                                            parse="HH:mm:ss"
+                                            format="HH:mm">
+                                            {data.starthour}
+                                        </Moment>
+                                        - {data.title}
+                                    </Modal.Title>
                                 </Modal.Header>
 
                                 <Modal.Body>
                                     <table className="text">
                                         <tr className="text ">
-                                            <td className="text ">Whwere:</td>
+                                            <td className="text ">Where:</td>
                                             <td className="text ">
                                                 {data.address}
                                             </td>
@@ -95,7 +124,19 @@ export class Event extends React.Component {
                                         <tr>
                                             <td className="text ">When:</td>
                                             <td className="text ">
-                                                {data.hour}
+                                                <Moment
+                                                    className="text"
+                                                    parse="HH:mm:ss"
+                                                    format="HH:mm">
+                                                    {data.starthour}
+                                                </Moment>{" "}
+                                                -{" "}
+                                                <Moment
+                                                    className="text"
+                                                    parse="HH:mm:ss"
+                                                    format="HH:mm">
+                                                    {data.endhour}
+                                                </Moment>
                                             </td>
                                         </tr>
                                         <tr>
