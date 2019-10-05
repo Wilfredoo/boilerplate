@@ -1,5 +1,8 @@
 body {
     margin: 25px;
+    color: #166678;
+    font-family: "Fira Sans", sans-serif;
+    letter-spacing: 1.6px;
 }
 
 .title {
@@ -10,6 +13,9 @@ body {
     text-align: center;
 }
 
+.moment {
+    font-size: 100px;
+}
 .dropdown {
     width: 400px;
     height: 80px;
@@ -17,13 +23,15 @@ body {
     background-color: white;
     border-color: black;
     border-width: 2px;
+    color: #33313b;
 }
+
 .berlin {
     font-size: 40px;
 }
 
 label {
-    font-size: 45px;
+    font-size: 40px;
 }
 
 .flex {
@@ -37,10 +45,16 @@ label {
     margin-bottom: 60px;
 }
 
+.eventText {
+    line-height: 25px;
+}
+
 .login {
+    color: #166678;
 }
 .dayDiv {
-    background-color: #01d28e;
+    background-color: #eadca6;
+
     padding: 40px;
 
     margin-bottom: 10px;
@@ -52,16 +66,12 @@ label {
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 50px;
+    color: #33313b;
 }
 
 .text {
-    font-size: 45px;
-    color: black;
-}
-
-.eventDescription {
-    line-height: 50px;
-    vertical-align: baseline;
+    font-size: 50px;
+    /* color: #166678; */
 }
 
 .descriptionAnswer {
@@ -83,12 +93,14 @@ label {
 
 .smallPlusDiv {
     align-content: center;
-    margin-left: 20px;
-    font-size: 35px;
+    margin-left: 15px;
+    font-size: 42px;
+    color: hotpink;
 }
 
 td {
-    min-width: 100px;
+    min-width: 200px;
+    vertical-align: baseline;
 }
 
 tr {
@@ -99,12 +111,21 @@ tr {
     display: flex;
 }
 
-.signout {
+.signout,
+.addEvent {
     text-align: right;
+    color: #166678;
+}
+
+.addEvent {
+    border: solid 2px black;
+    text-align: center;
+    padding: 10px;
 }
 
 .welcome {
     margin-top: 30px;
+    color: #166678;
 }
 
 .date,
@@ -126,7 +147,8 @@ tr {
 
 .eventLine {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    align-items: baseline;
 }
 
 .repeatDropdown {
@@ -150,8 +172,13 @@ tr {
     text-align: center;
 }
 
-.authText {
+.authTitle {
+    margin-top: 200px;
     margin-bottom: 50px;
+}
+
+.authText {
+    margin-bottom: 150px;
 }
 
 .euro {
@@ -185,6 +212,7 @@ tr {
     height: 200px;
     border-style: solid;
     border-color: black;
+    font-size: 35px;
 }
 
 .radioButton {
@@ -199,13 +227,18 @@ tr {
 .button {
     width: 400px;
     height: 150px;
-    font-size: 40px;
-    background-color: #333;
+    font-size: 42px;
+    background-color: #957541;
+    /* font-weight: bolder; */
     color: white;
 }
 
 .facebookContainer {
     margin-top: 120px;
+}
+
+.time {
+    font-size: 50px;
 }
 
 #facebook-button {
@@ -260,9 +293,27 @@ tr {
     }
 }
 
+::placeholder {
+    font-size: 35px;
+}
+
 @media (min-width: 1000px) {
+    .modal-dialog {
+        top: 15%;
+    }
+
+    td {
+        line-height: 50px;
+    }
+    .hideInWeb {
+        display: none;
+    }
     ::placeholder {
         font-size: 20px;
+    }
+
+    .authText {
+        margin-bottom: 50px;
     }
 
     .inputDiv {
@@ -299,9 +350,14 @@ tr {
         font-size: 20px;
     }
     label {
-        font-size: 20px;
+        font-size: 16px;
     }
 
+    .radioButton {
+        height: 20px;
+        width: 20px;
+        margin: 12px;
+    }
     .text,
     .date,
     .time {

@@ -72,6 +72,10 @@ export class EventForm extends React.Component {
                     <textarea
                         className="inputs description"
                         type="textArea"
+                        rows="4"
+                        cols="50"
+                        id="GFG"
+                        maxlength="250"
                         name="description"
                         placeholder="Keep it short and sweet. If there is an event on Facebook you can add the link here"
                         onChange={this.handleChange}
@@ -93,7 +97,7 @@ export class EventForm extends React.Component {
                         id="time"
                         name="hour"
                         min="10:00"
-                        defaultValue="10:00"
+                        defaultValue="18:00"
                         max="23:00"
                         className="time"
                         onChange={this.handleChange}
@@ -195,9 +199,6 @@ export class EventForm extends React.Component {
                         </div>
                     </div>
                 )}
-                <br />
-                <br />
-                <br />
                 <br />
 
                 <input

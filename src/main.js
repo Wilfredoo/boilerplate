@@ -256,31 +256,28 @@ export class Main extends React.Component {
                         <br />
                         <span className="berlin"> Swing Calendar</span>
                     </h1>
+                    <div className="buttonAndLogin">
+                        <p
+                            onClick={this.addEvent}
+                            className="addEvent text">
+                            Add new event
+                        </p>
 
-                    <Link to="/signInScreen">
-                        <div className="buttonsAuth">
-                            {!user && <p className="text login">Log in</p>}
-                        </div>
-                    </Link>
+                        {user && (
+                            <div>
+                                <p
+                                    className="signout text"
+                                    onClick={() => firebase.auth().signOut()}>
+                                    Sign out
+                                </p>
 
-                    {user && (
-                        <div>
-                            <p
-                                className="signout text"
-                                onClick={() => firebase.auth().signOut()}>
-                                Sign out
-                            </p>
-
-                            <div className="welcome text">
-                                Welcome {user && user.displayName}{" "}
+                                <div className="welcome text">
+                                    Welcome {user && user.displayName}{" "}
+                                </div>
                             </div>
-                        </div>
-                    )}
+                        )}
+                    </div>
                 </div>
-
-                <button onClick={this.addEvent} className="button">
-                    Add new event
-                </button>
 
                 <br />
                 <br />

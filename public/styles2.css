@@ -19,7 +19,9 @@
         width: 33px;
     }
 
-    .week2Web {
+    .week2Web,
+    .eventTitle,
+    .hideInMobile {
         display: none;
     }
 }
