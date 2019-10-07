@@ -45,10 +45,6 @@ label {
     margin-bottom: 60px;
 }
 
-.eventText {
-    /* line-height: 25px; */
-}
-
 .login {
     color: #166678;
 }
@@ -298,6 +294,9 @@ tr {
 }
 
 @media (min-width: 1000px) {
+    .eventText {
+        line-height: 25px;
+    }
     .modal-dialog {
         top: 15%;
     }

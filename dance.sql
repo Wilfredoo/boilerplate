@@ -27,10 +27,6 @@ CREATE TABLE calendar
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
-
-
-
 INSERT INTO calendar
     (title, dancetype, hour, date0, date1, date2, date3, date4, date5, date6, repeats, address, description, cost, price)
 VALUES
