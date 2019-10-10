@@ -1,6 +1,5 @@
 body {
     margin: 25px;
-
     color: #166678;
     font-family: "Fira Sans", sans-serif;
     letter-spacing: 1.6px;
@@ -46,16 +45,17 @@ label {
     margin-bottom: 60px;
 }
 
+table {
+    margin-bottom: 40px;
+}
 .login {
     color: #166678;
 }
 .dayDiv {
     background-color: #eadca6;
-
     padding: 40px;
-
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .day {
@@ -196,7 +196,7 @@ tr {
 .inputs {
     width: 95%;
     height: 70px;
-    font-size: 30px;
+    font-size: 40px;
     border-style: solid;
 }
 
@@ -209,7 +209,7 @@ tr {
     height: 200px;
     border-style: solid;
     border-color: black;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .radioButton {
@@ -295,6 +295,19 @@ tr {
 }
 
 @media (min-width: 1000px) {
+    .inputs {
+        font-size: 20px;
+    }
+    .eventForm {
+        margin: 25px;
+    }
+
+    .titleAndLogin {
+        margin: 20px;
+    }
+    body {
+        margin: 0;
+    }
     .eventText {
         line-height: 25px;
     }
@@ -329,6 +342,7 @@ tr {
 
     .description {
         height: 200px;
+        font-size: 20px;
     }
     .week1,
     .week2 {
@@ -368,7 +382,7 @@ tr {
         width: 50%;
         height: 200px;
         padding: 10px;
-        margin: 1px;
+        margin: 3px;
     }
 
     .dropdown {
@@ -380,6 +394,10 @@ tr {
 
     .weeks {
         /* width: auto; */
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
     }
 
     .smallPlusDiv {

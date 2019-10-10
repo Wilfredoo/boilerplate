@@ -12,7 +12,8 @@ export class EventForm extends React.Component {
             showRepeat: false,
             showPrice: false,
             repeats: "1",
-            meridian: "PM"
+            starthour: "18:00:00",
+            endhour: "01:00:00"
         };
         this.handleChange = this.handleChange.bind(this);
         this.submitEvent = this.submitEvent.bind(this);

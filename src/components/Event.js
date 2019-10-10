@@ -34,13 +34,13 @@ export class Event extends React.Component {
                 <div className="">
                     <div className="eventLine">
                         <p className="text eventText">
-                            <span className="time">
+                            <span className="">
                                 <Moment
-                                    className="text"
+                                    className="text time"
                                     parse="HH:mm:ss"
                                     format="HH:mm">
                                     {data.starthour}
-                                </Moment>
+                                </Moment>{" "}
                                 -{" "}
                             </span>
                             {data.title}{" "}
