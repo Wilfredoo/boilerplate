@@ -6,33 +6,61 @@ export class Event extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            expandEvent: false
+            expandEvent: false,
+            expandEvent2: false
         };
         this.expandEvent = this.expandEvent.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        this.expandEvent2 = this.expandEvent2.bind(this);
+    }
+
+    closeModal() {
+        this.setState(
+            {
+                expandEvent2: false
+            },
+            () => {
+                console.log("CLOSE it", this.state);
+            }
+        );
     }
 
     expandEvent() {
         console.log("expand it", this.state, this.props);
-
         this.setState(
             {
                 expandEvent: !this.state.expandEvent
             },
             () => {
-                console.log("expand it 2", this.state);
+                console.log("expand it", this.state);
+            }
+        );
+    }
+
+    expandEvent2() {
+        console.log("expand it", this.state, this.props);
+        this.setState(
+            {
+                expandEvent2: true
+            },
+            () => {
+                console.log("expand it yes pls", this.state);
             }
         );
     }
 
     render() {
         const { expandEvent } = this.state;
+        const { expandEvent2 } = this.state;
         const { data } = this.props;
         console.log("where is time", this.props);
 
         return (
             <div className="event" onClick={e => this.expandEvent()}>
                 <div className="">
-                    <div className="eventLine">
+                    <div
+                        className="eventLine"
+                        onClick={e => this.expandEvent2()}>
                         <p className="text eventText">
                             <span className="">
                                 <Moment
@@ -97,21 +125,26 @@ export class Event extends React.Component {
                             </table>
                         </div>
                     )}
-                    {expandEvent && (
+                    {expandEvent2 && (
                         <div className="hideInMobile">
+                            <div
+                                onClick={e => this.closeModal()}
+                                className="backgroundBlock"></div>
                             <Modal.Dialog>
-                                <Modal.Header closeButton>
-                                    <Modal.Title>
-                                        {" "}
-                                        <Moment
-                                            className="text"
-                                            parse="HH:mm:ss"
-                                            format="HH:mm">
-                                            {data.starthour}
-                                        </Moment>
-                                        - {data.title}
-                                    </Modal.Title>
-                                </Modal.Header>
+                                <div onClick={e => this.closeModal()}>
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>
+                                            {" "}
+                                            <Moment
+                                                className="text"
+                                                parse="HH:mm:ss"
+                                                format="HH:mm">
+                                                {data.starthour}
+                                            </Moment>
+                                            - {data.title}
+                                        </Modal.Title>
+                                    </Modal.Header>
+                                </div>
 
                                 <Modal.Body>
                                     <table className="text">

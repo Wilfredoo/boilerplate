@@ -24,4 +24,8 @@
     .hideInMobile {
         display: none;
     }
+
+    .hideInMobile {
+        z-index: 5;
+    }
 }

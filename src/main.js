@@ -252,14 +252,21 @@ export class Main extends React.Component {
             <div className="main">
                 <div className="titleAndLogin">
                     <h1 className="title">
-                        Baila Berlin
+                        Dansadays
                         <br />
-                        <span className="berlin"> Swing Calendar</span>
+                        <span className="berlin">
+                            {" "}
+                            A better swing calendar for Berlin
+                        </span>
                     </h1>
+                    <div className="contactDiv">
+                        <p className="contact">
+                            To add or cancel an event, please contact
+                            me@wilfredocasas.com
+                        </p>
+                    </div>
                     <div className="buttonAndLogin">
-                        <p
-                            onClick={this.addEvent}
-                            className="addEvent text">
+                        <p onClick={this.addEvent} className="addEvent text">
                             Add new event
                         </p>
 

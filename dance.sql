@@ -28,6 +28,6 @@ CREATE TABLE calendar
 );
 
 INSERT INTO calendar
-    (title, dancetype, hour, date0, date1, date2, date3, date4, date5, date6, repeats, address, description, cost, price)
+    (title, dancetype, starthour, endhour, date0, date1, date2, date3, date4, date5, date6, repeats, address, description, cost, price)
 VALUES
-    ('today event', 'swing', '9pm', '', date1, date2, date3, date4, date5, date6 , 'continuous', 'augustrasse 140', 'its gonna be great, just great', 'true', '2');
+    ('today event', 'swing', '09:00:00', '01:00:00', '12/10/19', '13/10/19', '14/10/19', '15/10/19', '16/10/19', '17/10/19', '18/10/19' , 'continuous', 'augustrasse 140', 'its gonna be great, just great', 'true', '2');
