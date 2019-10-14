@@ -8,7 +8,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import ReactGA from "react-ga";
 
 function initializeReactGA() {
-    ReactGA.initialize("UA-129656531-1");
+    ReactGA.initialize("UA-129656531-3");
     ReactGA.pageview("/homepage");
 }
 
