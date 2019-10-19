@@ -263,7 +263,7 @@ export class Main extends React.Component {
                         </h2>
                         <div className="contactDiv">
                             <p className="contact">
-                                To add or cancel an event, please contact
+                                To add or cancel an event, please reach out to
                                 me@wilfredocasas.com
                             </p>
                         </div>
