@@ -56,6 +56,7 @@ export class EventForm extends React.Component {
                         type="text"
                         name="title"
                         onChange={this.handleChange}
+                        required="required"
                     />
                 </div>
                 <div className="inputDiv">

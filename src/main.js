@@ -253,18 +253,20 @@ export class Main extends React.Component {
             <div className="main">
                 <div className="titleAndLogin">
                     <h1 className="title">
-                        Dansadays
+                        <span className="justTitle">Dansadays</span>
                         <br />
-                        <span className="berlin">
+                    </h1>
+                    <div className="belowTitle">
+                        <h2 className="berlin">
                             {" "}
                             A better swing calendar for Berlin
-                        </span>
-                    </h1>
-                    <div className="contactDiv">
-                        <p className="contact">
-                            To add or cancel an event, please contact
-                            me@wilfredocasas.com
-                        </p>
+                        </h2>
+                        <div className="contactDiv">
+                            <p className="contact">
+                                To add or cancel an event, please contact
+                                me@wilfredocasas.com
+                            </p>
+                        </div>
                     </div>
                     <div className="buttonAndLogin">
                         <p onClick={this.addEvent} className="addEvent text">
@@ -297,7 +299,7 @@ export class Main extends React.Component {
                     {this.state.week === "this" && (
                         <div className="week1">
                             <div className="dayDiv">
-                                <p className="text day">{day}</p>
+                                <p className=" day">{day}</p>
                                 <div className="eventsDiv">
                                     {this.state.events &&
                                         this.state.events.map(data => {
@@ -338,7 +340,7 @@ export class Main extends React.Component {
                             </div>
 
                             <div className="dayDiv">
-                                <p className="text day">{day1}</p>
+                                <p className=" day">{day1}</p>
                                 <div className="eventsDiv">
                                     {this.state.events &&
                                         this.state.events.map(data => {
@@ -380,7 +382,7 @@ export class Main extends React.Component {
                             </div>
 
                             <div className="dayDiv">
-                                <p className="text day">{day2}</p>
+                                <p className=" day">{day2}</p>
                                 <div className="eventsDiv">
                                     {this.state.events &&
                                         this.state.events.map(data => {
@@ -420,7 +422,7 @@ export class Main extends React.Component {
                                 </div>
                             </div>
                             <div className="dayDiv">
-                                <p className="text day">{day3}</p>
+                                <p className=" day">{day3}</p>
                                 <div className="eventsDiv">
                                     {this.state.events &&
                                         this.state.events.map(data => {
@@ -460,7 +462,7 @@ export class Main extends React.Component {
                                 </div>
                             </div>
                             <div className="dayDiv">
-                                <p className="text day">{day4}</p>
+                                <p className=" day">{day4}</p>
                                 <div className="eventsDiv">
                                     {this.state.events &&
                                         this.state.events.map(data => {
@@ -500,7 +502,7 @@ export class Main extends React.Component {
                                 </div>
                             </div>
                             <div className="dayDiv">
-                                <p className="text day">{day5}</p>
+                                <p className=" day">{day5}</p>
                                 <div className="eventsDiv">
                                     {this.state.events &&
                                         this.state.events.map(data => {
@@ -540,7 +542,7 @@ export class Main extends React.Component {
                                 </div>
                             </div>
                             <div className="dayDiv">
-                                <p className="text day">{day6}</p>
+                                <p className=" day">{day6}</p>
                                 <div className="eventsDiv">
                                     {this.state.events &&
                                         this.state.events.map(data => {
@@ -584,7 +586,7 @@ export class Main extends React.Component {
                     {this.state.week === "next" && (
                         <div className="week2">
                             <div className="dayDiv">
-                                <p className="text day">
+                                <p className=" day">
                                     {day7} {datees[date7.getDate()]}
                                 </p>
                                 <div className="eventsDiv">
@@ -627,7 +629,7 @@ export class Main extends React.Component {
                             </div>
 
                             <div className="dayDiv">
-                                <p className="text day">
+                                <p className=" day">
                                     {day8} {datees[date8.getDate()]}
                                 </p>
                                 <div className="eventsDiv">
@@ -670,7 +672,7 @@ export class Main extends React.Component {
                             </div>
 
                             <div className="dayDiv">
-                                <p className="text day">
+                                <p className=" day">
                                     {day9} {datees[date9.getDate()]}
                                 </p>
                                 <div className="eventsDiv">
@@ -712,7 +714,7 @@ export class Main extends React.Component {
                                 </div>
                             </div>
                             <div className="dayDiv">
-                                <p className="text day">
+                                <p className=" day">
                                     {day10} {datees[date10.getDate()]}
                                 </p>
                                 <div className="eventsDiv">
@@ -754,7 +756,7 @@ export class Main extends React.Component {
                                 </div>
                             </div>
                             <div className="dayDiv">
-                                <p className="text day">
+                                <p className=" day">
                                     {day11} {datees[date11.getDate()]}
                                 </p>
                                 <div className="eventsDiv">
@@ -796,7 +798,7 @@ export class Main extends React.Component {
                                 </div>
                             </div>
                             <div className="dayDiv">
-                                <p className="text day">
+                                <p className=" day">
                                     {day12} {datees[date12.getDate()]}
                                 </p>
                                 <div className="eventsDiv">
@@ -838,7 +840,9 @@ export class Main extends React.Component {
                                 </div>
                             </div>
                             <div className="dayDiv">
-                                <p className="text day">
+                                <p
+                                    className="
+                                 day">
                                     {day13} {datees[date13.getDate()]}
                                 </p>
                                 <div className="eventsDiv">
@@ -883,7 +887,7 @@ export class Main extends React.Component {
                     )}
                     <div className="week2Web week2">
                         <div className="dayDiv">
-                            <p className="text day">
+                            <p className=" day">
                                 {day7} {datees[date7.getDate()]}
                             </p>
                             <div className="eventsDiv">
@@ -926,7 +930,7 @@ export class Main extends React.Component {
                         </div>
 
                         <div className="dayDiv">
-                            <p className="text day">
+                            <p className=" day">
                                 {day8} {datees[date8.getDate()]}
                             </p>
                             <div className="eventsDiv">
@@ -969,7 +973,7 @@ export class Main extends React.Component {
                         </div>
 
                         <div className="dayDiv">
-                            <p className="text day">
+                            <p className=" day">
                                 {day9} {datees[date9.getDate()]}
                             </p>
                             <div className="eventsDiv">
@@ -1011,7 +1015,7 @@ export class Main extends React.Component {
                             </div>
                         </div>
                         <div className="dayDiv">
-                            <p className="text day">
+                            <p className=" day">
                                 {day10} {datees[date10.getDate()]}
                             </p>
                             <div className="eventsDiv">
@@ -1053,7 +1057,7 @@ export class Main extends React.Component {
                             </div>
                         </div>
                         <div className="dayDiv">
-                            <p className="text day">
+                            <p className=" day">
                                 {day11} {datees[date11.getDate()]}
                             </p>
                             <div className="eventsDiv">
@@ -1095,7 +1099,7 @@ export class Main extends React.Component {
                             </div>
                         </div>
                         <div className="dayDiv">
-                            <p className="text day">
+                            <p className=" day">
                                 {day12} {datees[date12.getDate()]}
                             </p>
                             <div className="eventsDiv">
@@ -1137,7 +1141,7 @@ export class Main extends React.Component {
                             </div>
                         </div>
                         <div className="dayDiv">
-                            <p className="text day">
+                            <p className=" day">
                                 {day13} {datees[date13.getDate()]}
                             </p>
                             <div className="eventsDiv">

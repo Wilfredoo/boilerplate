@@ -1,13 +1,16 @@
 body {
     margin: 25px;
-    color: #166678;
+    margin-top: 50px;
     font-family: "Fira Sans", sans-serif;
     letter-spacing: 1.6px;
+    background-color: white;
+    color: #f6416c;
 }
 
 .title {
-    font-size: 60px;
+    font-size: 70px;
     width: 50%;
+    color: darkslategray;
 }
 
 .center {
@@ -22,13 +25,23 @@ body {
     height: 80px;
     font-size: 35px;
     background-color: white;
-    border-color: black;
+    border-color: #00b8a9;
     border-width: 2px;
-    color: #33313b;
+    color: #00b8a9;
 }
 
 .berlin {
-    font-size: 40px;
+    font-size: 50px;
+    color: darkslategray;
+    width: 50%;
+    line-height: 70px;
+}
+
+.belowTitle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 33px;
+    line-height: 50px;
 }
 
 label {
@@ -40,9 +53,9 @@ label {
 }
 
 .titleAndLogin {
-    display: flex;
+    /* display: flex; */
     align-items: start;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-bottom: 60px;
 }
 
@@ -53,18 +66,18 @@ table {
     color: #166678;
 }
 .dayDiv {
-    background-color: #eadca6;
+    background-color: #ffde7d;
     padding: 40px;
     margin-bottom: 10px;
     margin-top: 15px;
 }
 
 .day {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 50px;
-    color: #33313b;
+    color: darkslategray;
 }
 
 .text {
@@ -93,7 +106,11 @@ table {
     align-content: center;
     margin-left: 15px;
     font-size: 42px;
-    color: hotpink;
+    color: #f6416c;
+}
+
+.justTitle {
+    color: #00b8a9;
 }
 
 .backgroundBlock {
@@ -123,8 +140,9 @@ tr {
 }
 
 .contact {
-    font-size: 30px;
+    font-size: 35px;
     text-align: right;
+    color: darkslategray;
 }
 
 .contactDiv {
@@ -399,6 +417,7 @@ tr {
 
     .berlin {
         font-size: 25px;
+        line-height: 70px;
     }
 
     .button {
@@ -425,7 +444,7 @@ tr {
 
     .dayDiv {
         width: 50%;
-        height: 230px;
+        height: 250px;
         padding: 10px;
         margin: 3px;
     }
