@@ -26,7 +26,7 @@ body {
 .dropdown {
     width: 400px;
     height: 80px;
-    font-size: 35px;
+    font-size: 38px;
     background-color: white;
     border-color: #00b8a9;
     border-width: 2px;
@@ -348,6 +348,9 @@ tr {
 }
 
 @media (min-width: 1000px) {
+    .justTitle {
+        font-size: 45px;
+    }
     body {
         letter-spacing: 0;
     }
