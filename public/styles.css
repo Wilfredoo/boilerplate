@@ -24,7 +24,9 @@ body {
     font-size: 100px;
 }
 .dropdown {
-    width: 400px;
+    height: 60px;
+    width: 100%;
+    text-align-last: center;
     height: 80px;
     font-size: 38px;
     background-color: white;
@@ -64,6 +66,14 @@ label {
 
 table {
     margin-bottom: 40px;
+    border-bottom: 2px darkslategray solid;
+    border-top: darkslategray solid 2px;
+}
+
+.where {
+}
+
+.fee {
 }
 .login {
     color: #166678;
@@ -88,6 +98,11 @@ table {
     /* color: #166678; */
 }
 
+.smallerText {
+    font-size: 45px;
+    /* color: #166678; */
+}
+
 .descriptionAnswer {
     word-break: break-all;
 }
@@ -108,7 +123,7 @@ table {
 .smallPlusDiv {
     align-content: center;
     margin-left: 15px;
-    font-size: 42px;
+    font-size: 52px;
     color: #f6416c;
 }
 

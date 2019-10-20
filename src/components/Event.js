@@ -81,24 +81,28 @@ export class Event extends React.Component {
                     {expandEvent && (
                         <div className="hideInWeb">
                             <h2 className="eventTitle">{data.title}</h2>
-                            <table className="text ">
-                                <tr className="text ">
-                                    <td className="text ">Where:</td>
-                                    <td className="text ">{data.address}</td>
+                            <table className=" ">
+                                <tr className=" ">
+                                    <td className="smallerText where ">
+                                        Where:
+                                    </td>
+                                    <td className="smallerText ">
+                                        {data.address}
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td className="text ">When:</td>
+                                    <td className="smallerText ">When:</td>
                                     <td>
                                         {" "}
                                         <Moment
-                                            className="text"
+                                            className="smallerText"
                                             parse="HH:mm:ss"
                                             format="HH:mm">
                                             {data.starthour}
                                         </Moment>{" "}
                                         -{" "}
                                         <Moment
-                                            className="text"
+                                            className="smallerText"
                                             parse="HH:mm:ss"
                                             format="HH:mm">
                                             {data.endhour}
@@ -106,20 +110,24 @@ export class Event extends React.Component {
                                     </td>{" "}
                                 </tr>
                                 <tr>
-                                    <td className="text">About:</td>
-                                    <td className="text  descriptionAnswer">
+                                    <td className="smallerText">About:</td>
+                                    <td className="smallerText  descriptionAnswer">
                                         {data.description}
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="text ">Entry-fee:</td>
+                                    <td className="smallerText fee">
+                                        Entry-fee:
+                                    </td>
                                     {data.cost === "free" && (
-                                        <td className="text ">
+                                        <td className="smallerText ">
                                             Free (Donation based)
                                         </td>
                                     )}
                                     {data.cost === "not-free" && (
-                                        <td className="text ">{data.price}</td>
+                                        <td className="smallerText ">
+                                            {data.price}
+                                        </td>
                                     )}
                                 </tr>
                             </table>
