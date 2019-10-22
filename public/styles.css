@@ -10,3 +10,508 @@ body {
     color: #f6416c;
     font-size: 50px;
 }
+
+.title {
+    font-size: 70px;
+    width: 50%;
+    color: darkslategray;
+}
+
+.center {
+    text-align: center;
+}
+
+.moment {
+    font-size: 100px;
+}
+.dropdown {
+    height: 60px;
+    width: 100%;
+    text-align-last: center;
+    height: 80px;
+    font-size: 38px;
+    background-color: white;
+    border-color: #00b8a9;
+    border-width: 2px;
+    color: #00b8a9;
+}
+
+.berlin {
+    font-size: 50px;
+    color: darkslategray;
+    max-width: 50%;
+    line-height: 70px;
+}
+
+.belowTitle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 33px;
+    line-height: 50px;
+}
+
+label {
+    font-size: 40px;
+}
+
+/* .flex {
+    display: flex;
+} */
+
+.titleAndLogin {
+    /* display: flex; */
+    align-items: start;
+    /* justify-content: space-between; */
+    margin-bottom: 60px;
+}
+
+table {
+    margin-bottom: 40px;
+    border-bottom: 2px darkslategray solid;
+    border-top: darkslategray solid 2px;
+}
+
+.where {
+}
+
+.fee {
+}
+.login {
+    color: #166678;
+}
+.dayDiv {
+    background-color: #ffde7d;
+    padding: 40px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.day {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: darkslategray;
+}
+
+.text {
+    font-size: 50px;
+    /* color: #166678; */
+}
+
+.smallerText {
+    font-size: 45px;
+    /* color: #166678; */
+}
+
+.descriptionAnswer {
+    word-break: break-all;
+}
+
+.eventsDiv {
+    margin-bottom: 70px;
+}
+
+.plusDiv {
+    font-size: 50px;
+    text-align: center;
+}
+
+.showMore {
+    font-size: 30px;
+}
+
+.modal-header {
+    display: block;
+}
+
+.smallPlusDiv {
+    align-content: center;
+    margin-left: 15px;
+    font-size: 52px;
+    color: #f6416c;
+}
+
+.justTitle {
+    color: #00b8a9;
+    letter-spacing: 5px;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.backgroundBlock {
+    z-index: 8;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+td {
+    min-width: 200px;
+    vertical-align: baseline;
+}
+
+tr {
+    align-items: flex-start;
+}
+
+.buttonAndLogin {
+    display: none;
+}
+
+.contact {
+    font-size: 35px;
+    text-align: right;
+    color: darkslategray;
+}
+
+.contactDiv {
+    max-width: 50%;
+}
+
+.dayAndPlus {
+    display: flex;
+}
+
+.signout,
+.addEvent {
+    text-align: right;
+    color: #166678;
+}
+
+.addEvent {
+    border: solid 2px black;
+    text-align: center;
+    padding: 10px;
+}
+
+.welcome {
+    margin-top: 30px;
+    color: #166678;
+}
+
+.date,
+.time {
+    width: 300px;
+    height: 100px;
+    font-size: 30px;
+}
+
+.repeatsDiv {
+    margin-top: 60px;
+    align-items: center;
+}
+
+.week1,
+.week2 {
+    margin-top: 30px;
+}
+
+.eventLine {
+    display: flex;
+    /* align-items: center; */
+    align-items: baseline;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.repeatDropdown {
+    width: 100px;
+    height: 70px;
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+}
+
+.dateDropdown {
+    width: 150px;
+    height: 70px;
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+}
+
+.authText,
+.authTitle {
+    text-align: center;
+}
+
+.authTitle {
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+.authText {
+    margin-bottom: 150px;
+}
+
+.euro {
+    height: 70px;
+    width: 35px;
+    font-size: 55px;
+    border-style: solid;
+    border-color: gray;
+    border-right: white;
+}
+.priceInput {
+    border: gray;
+    border-left: white;
+    font-size: 50px;
+    height: 70px;
+}
+
+.inputs {
+    width: 95%;
+    height: 70px;
+    font-size: 40px;
+    border-style: solid;
+}
+
+.inputDiv {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.description {
+    height: 200px;
+    border-style: solid;
+    border-color: black;
+    font-size: 40px;
+}
+
+.radioButton {
+    height: 40px;
+    width: 40px;
+}
+
+.event {
+    width: 100%;
+}
+
+.button {
+    width: 400px;
+    height: 150px;
+    font-size: 42px;
+    background-color: #957541;
+    /* font-weight: bolder; */
+    color: white;
+}
+
+.facebookContainer {
+    margin-top: 120px;
+}
+
+.time {
+    font-size: 50px;
+}
+
+#facebook-button {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 45px 80px;
+    background-image: -webkit-linear-gradient(#3b5998, #314b83);
+    display: inline-block;
+    border-radius: 5px;
+    border: solid 1px #283e6b;
+    box-shadow: inset 0px 1px rgba(255, 255, 255, 0.2);
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.3s;
+    &:hover {
+        background-image: -webkit-linear-gradient(#4466ac, #34518e);
+    }
+    &:active {
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.3),
+            0px 1px rgba(255, 255, 255, 0.2);
+    }
+}
+
+#gmail-button {
+    color: black;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 45px 80px;
+    background-image: -webkit-linear-gradient(cornsilk);
+    display: inline-block;
+    border-radius: 5px;
+    border: solid 1px #283e6b;
+    box-shadow: inset 0px 1px rgba(255, 255, 255, 0.2);
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.3s;
+    &:hover {
+        background-image: -webkit-linear-gradient(#4466ac, #34518e);
+    }
+    &:active {
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.3),
+            0px 1px rgba(255, 255, 255, 0.2);
+    }
+}
+
+::placeholder {
+    font-size: 35px;
+}
+
+@media (min-width: 1000px) {
+    .justTitle {
+        font-size: 45px;
+    }
+    body {
+        letter-spacing: 0;
+    }
+    .belowTitle {
+        margin-top: 0px;
+    }
+    .day {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .eventLine {
+        margin-top: 0px;
+    }
+    .euro {
+        font-size: 30px;
+        height: 40px;
+    }
+    .contact {
+        font-size: 20px;
+    }
+    .inputs {
+        font-size: 20px;
+    }
+    .eventForm {
+        margin: 25px;
+    }
+
+    .titleAndLogin {
+        margin: 20px;
+    }
+    body {
+        margin: 0;
+    }
+    .eventText {
+        line-height: 25px;
+    }
+    .modal-dialog {
+        top: 15%;
+    }
+
+    td {
+        line-height: 50px;
+    }
+    .hideInWeb {
+        display: none;
+    }
+    ::placeholder {
+        font-size: 20px;
+    }
+
+    .authText {
+        margin-bottom: 50px;
+    }
+
+    .inputDiv {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .inputs,
+    .date,
+    .time {
+        width: 40%;
+        height: 40px;
+    }
+
+    .description {
+        height: 200px;
+        font-size: 20px;
+    }
+    .week1,
+    .week2 {
+        width: 100%;
+        display: flex;
+    }
+
+    .eventsDiv {
+        line-height: 10px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .berlin {
+        font-size: 25px;
+        line-height: 70px;
+    }
+
+    .button {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+    label {
+        font-size: 16px;
+    }
+
+    .radioButton {
+        height: 20px;
+        width: 20px;
+        margin: 12px;
+    }
+    .text,
+    .date,
+    .time {
+        font-size: 14px;
+        margin-bottom: 9px;
+        letter-spacing: 1.1px;
+    }
+
+    .dayDiv {
+        width: 50%;
+        height: 250px;
+        padding: 10px;
+        margin: 3px;
+    }
+
+    .dropdown {
+        width: 200px;
+        height: 60px;
+        font-size: 25px;
+        display: none;
+    }
+
+    .weeks {
+        /* width: auto; */
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .smallPlusDiv {
+        font-size: 15px;
+    }
+
+    .modal {
+        /* top: 20%; */
+    }
+
+    .modal-dialog {
+        max-width: 900px;
+    }
+}
