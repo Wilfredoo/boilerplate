@@ -124,3 +124,17 @@ exports.getEvents = function() {
             return results.rows;
         });
 };
+
+exports.getEventsBetter = function(from, to) {
+    return db
+        .query(
+            `SELECT *
+        FROM calendar
+        WHERE date0 >= $1 AND date0 < $2 OR date1 >= $1 AND date1 < $2 OR date2 >= $1 AND date2 < $2 OR date3 >= $1 AND date3 < $2 OR date4 >= $1 AND date4 < $2 OR date5 >= $1 AND date5 < $2 OR date6 >= $1 AND date6 < $2
+        ;`,
+            [from, to]
+        )
+        .then(results => {
+            return results.rows;
+        });
+};

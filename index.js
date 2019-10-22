@@ -43,40 +43,6 @@ app.use(
     })
 );
 
-// passport.use(
-//     new FacebookStrategy(
-//         {
-//             clientID: 464372870817604,
-//             clientSecret: fbSecret,
-//             callbackURL: callback_URL
-//         },
-//         function(accessToken, refreshToken, profile, done) {
-//             console.log("accessToken", accessToken);
-//             console.log("refreshToken", refreshToken);
-//             return database
-//                 .findOrCreateFacebookUser(profile.id, profile.displayName)
-//                 .then(user => {
-//                     done(null, profile);
-//                 });
-//         }
-//     )
-// );
-
-// passport.use(
-//     new GoogleStrategy(
-//         {
-//             clientID: GOOGLE_CLIENT_ID,
-//             clientSecret: GOOGLE_CLIENT_SECRET,
-//             callbackURL: "http://www.example.com/auth/google/callback"
-//         },
-//         function(accessToken, refreshToken, profile, cb) {
-//             User.findOrCreate({ googleId: profile.id }, function(err, user) {
-//                 return cb(err, user);
-//             });
-//         }
-//     )
-// );
-
 // console logs these user and user ids in the different functions, see wat happens
 passport.serializeUser(function(user, done) {
     done(null, user);
@@ -118,6 +84,15 @@ app.get("/get", function(req, res) {
 
 app.get("/getEvents", function(req, res) {
     return database.getEvents().then(data => {
+        res.json({
+            data
+        });
+    });
+});
+
+app.get("/getEventsBetter", function(req, res) {
+    console.log(req.query.to);
+    return database.getEventsBetter(req.query.from, req.query.to).then(data => {
         res.json({
             data
         });

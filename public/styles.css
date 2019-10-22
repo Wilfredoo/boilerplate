@@ -116,6 +116,10 @@ table {
     text-align: center;
 }
 
+.showMore {
+    font-size: 30px;
+}
+
 .modal-header {
     display: block;
 }

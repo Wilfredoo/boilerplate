@@ -15,26 +15,39 @@ export class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            week: "this"
+            week: "this",
+            showMore: "false"
         };
         this.changeWeek = this.changeWeek.bind(this);
         this.addEvent = this.addEvent.bind(this);
+        this.showMore = this.showMore.bind(this);
+
     }
 
     async componentDidMount() {
+        let date = new Date();
+        let from = date;
+        from.setHours(0);
+        from.setMinutes(0);
+        from = from.toISOString();
+        let to = new Date(
+            date.getTime() + 14 * 24 * 60 * 60 * 1000
+        ).toISOString();
+
         await firebase.auth().onAuthStateChanged(user => {
             console.log("hey user");
             this.setState({ isSignedIn: !!user });
         });
-        await this.getEvents();
+        await this.getEventsBetter(from, to);
+
         console.log("component did mount once");
     }
 
-    getEvents() {
-        axios.get("/getEvents").then(result => {
+    getEventsBetter(from, to) {
+        axios.get(`/getEventsBetter?from=${from}&to=${to}`).then(result => {
             this.setState({ events: result.data.data }, () => {
                 console.log(
-                    "i sure hope events appear here",
+                    "i sure hope events appear here but BETTER",
                     this.state.events
                 );
             });
@@ -42,12 +55,18 @@ export class Main extends React.Component {
     }
 
     addEvent() {
-        console.log("hi", this.state);
+        // console.log("hi", this.state);
         if (this.state.isSignedIn === true) {
             this.props.history.push("/eventForm");
         } else {
             this.props.history.push("/signInScreen");
         }
+    }
+
+    showMore() {
+        this.setState({
+            showMore: "true"
+        });
     }
 
     changeWeek(event) {
@@ -58,9 +77,9 @@ export class Main extends React.Component {
     }
 
     getEventDetails(id) {
-        console.log("ill get those event details dont worry", id);
+        // console.log("ill get those event details dont worry", id);
         axios.get("/getEventDetails/" + id).then(result => {
-            console.log("here are ur godam details", result.data.data.id);
+            // console.log("here are ur godam details", result.data.data.id);
             this.setState({
                 eventData: result.data
             });
@@ -69,6 +88,7 @@ export class Main extends React.Component {
 
     render() {
         let date = new Date();
+
         let date1 = new Date();
         date1.setDate(date1.getDate() + 1);
 
@@ -92,7 +112,6 @@ export class Main extends React.Component {
 
         let date8 = new Date();
         date8.setDate(date8.getDate() + 8);
-        console.log("heho", date8.getMonth());
 
         let date9 = new Date();
         date9.setDate(date9.getDate() + 9);
@@ -108,9 +127,6 @@ export class Main extends React.Component {
 
         let date13 = new Date();
         date13.setDate(date13.getDate() + 13);
-
-        console.log("tubi", date);
-        console.log("tubi2", date1);
 
         let days = [
             "Sunday",
@@ -216,44 +232,17 @@ export class Main extends React.Component {
         let date12Converted = toSystemDate(date12).toString();
         let date13Converted = toSystemDate(date13).toString();
 
-        // console.log("aff", toSystemDate(MyDate).toString());
-        // console.log(
-        //     "aff2",
-        //     toSystemDate(new Date("2019-09-16T22:00:00.000Z")).toString()
-        // );
-
-        // console.log(
-        //     "aff3",
-        //     toSystemDate(
-        //         new Date(this.state.events && this.state.events[1].date0)
-        //     ).toString()
-        // );
-
         console.log("converted today", todayConvertedDate);
         console.log("converted tomorrow", date1Converted);
 
-        // MyDate.setDate(MyDate.getDate());
-
-        // MyDateString =
-        //     MyDate.getFullYear() +
-        //     "-" +
-        //     ("0" + (MyDate.getMonth() + 1)).slice(-2) +
-        //     "-" +
-        //     ("0" + MyDate.getDate()).slice(-2);
-
-        // console.log("datedate", MyDateString);
-        // console.log(
-        //     "iso date to convert",
-        //     this.state.events && this.state.events[1].date0
-        // );
-
         const user = firebase.auth().currentUser;
         console.log("USER", user);
+        let indexe;
         return (
             <div className="main">
                 <div className="titleAndLogin">
                     <h1 className="title">
-                        <span className="justTitle">Dansadays</span>
+                        <span className="justTitle">Juanita Calendar</span>
                         <br />
                     </h1>
                     <div className="belowTitle">
@@ -302,40 +291,60 @@ export class Main extends React.Component {
                                 <p className=" day">{day}</p>
                                 <div className="eventsDiv">
                                     {this.state.events &&
-                                        this.state.events.map(data => {
-                                            if (
-                                                todayConvertedDate ===
-                                                    toSystemDate(
-                                                        new Date(data.date0)
-                                                    ).toString() ||
-                                                todayConvertedDate ===
-                                                    toSystemDate(
-                                                        new Date(data.date1)
-                                                    ).toString() ||
-                                                todayConvertedDate ===
-                                                    toSystemDate(
-                                                        new Date(data.date2)
-                                                    ).toString() ||
-                                                todayConvertedDate ===
-                                                    toSystemDate(
-                                                        new Date(data.date3)
-                                                    ).toString() ||
-                                                todayConvertedDate ===
-                                                    toSystemDate(
-                                                        new Date(data.date4)
-                                                    ).toString() ||
-                                                todayConvertedDate ===
-                                                    toSystemDate(
-                                                        new Date(data.date5)
-                                                    ).toString() ||
-                                                todayConvertedDate ===
-                                                    toSystemDate(
-                                                        new Date(data.date6)
-                                                    ).toString()
-                                            ) {
+                                        this.state.events
+                                            .filter(data => {
+                                                return (
+                                                    todayConvertedDate ===
+                                                        toSystemDate(
+                                                            new Date(data.date0)
+                                                        ).toString() ||
+                                                    todayConvertedDate ===
+                                                        toSystemDate(
+                                                            new Date(data.date1)
+                                                        ).toString() ||
+                                                    todayConvertedDate ===
+                                                        toSystemDate(
+                                                            new Date(data.date2)
+                                                        ).toString() ||
+                                                    todayConvertedDate ===
+                                                        toSystemDate(
+                                                            new Date(data.date3)
+                                                        ).toString() ||
+                                                    todayConvertedDate ===
+                                                        toSystemDate(
+                                                            new Date(data.date4)
+                                                        ).toString() ||
+                                                    todayConvertedDate ===
+                                                        toSystemDate(
+                                                            new Date(data.date5)
+                                                        ).toString() ||
+                                                    todayConvertedDate ===
+                                                        toSystemDate(
+                                                            new Date(data.date6)
+                                                        ).toString()
+                                                );
+                                            })
+                                            .filter((data, index) => {
+                                                console.log(
+                                                    "look retriever",
+                                                    index
+                                                );
+                                                indexe = index;
+                                                if (
+                                                    this.state.showMore ===
+                                                    "true"
+                                                ) {
+                                                    return index < 30;
+                                                } else {
+                                                    return index < 3;
+
+                                                }
+                                            })
+                                            .map(data => {
                                                 return <Event data={data} />;
-                                            }
-                                        })}
+                                            })}
+
+                                    {this.state.showMore=== "false" && indexe >= 3 && <div onClick={this.showMore}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
 
@@ -344,7 +353,6 @@ export class Main extends React.Component {
                                 <div className="eventsDiv">
                                     {this.state.events &&
                                         this.state.events.map(data => {
-                                            console.log("dataaa", data);
                                             if (
                                                 date1Converted ===
                                                     toSystemDate(

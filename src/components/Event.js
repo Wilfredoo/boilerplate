@@ -26,7 +26,6 @@ export class Event extends React.Component {
     }
 
     expandEvent() {
-        console.log("expand it", this.state, this.props);
         this.setState(
             {
                 expandEvent: !this.state.expandEvent
@@ -38,7 +37,6 @@ export class Event extends React.Component {
     }
 
     expandEvent2() {
-        console.log("expand it", this.state, this.props);
         this.setState(
             {
                 expandEvent2: true
@@ -53,7 +51,6 @@ export class Event extends React.Component {
         const { expandEvent } = this.state;
         const { expandEvent2 } = this.state;
         const { data } = this.props;
-        console.log("where is time", this.props);
 
         return (
             <div className="event" onClick={e => this.expandEvent()}>
