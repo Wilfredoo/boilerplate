@@ -219,7 +219,7 @@ export class Main extends React.Component {
             console.log("look at me now", `${date.getFullYear()}-${date.getMonth() +
                 1}-${date.getDate()} 22:00`)
                 console.log("look at me now 3000", new Date(`${date.getFullYear()}-${date.getMonth() +
-                    1}-${date.getDate()} 22:00`))
+                    1}-${date.getDate()} `))
                 
                 return new Date(
                 `${date.getFullYear()}-${date.getMonth() +
@@ -309,6 +309,8 @@ export class Main extends React.Component {
                                     {this.state.events &&
                                         this.state.events
                                             .filter(data => {
+                                                console.log("DATAAAA WOOF", data)
+
                                                 return (
                                                     todayConvertedDate ===
                                                         toSystemDate(
