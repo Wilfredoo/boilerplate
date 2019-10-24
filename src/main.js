@@ -216,7 +216,12 @@ export class Main extends React.Component {
             console.log("full year", date.getFullYear())
             console.log("full month", date.getMonth())
             console.log("get date", date.getDate())
-            return new Date(
+            console.log("look at me now", `${date.getFullYear()}-${date.getMonth() +
+                1}-${date.getDate()} 22:00`)
+                console.log("look at me now 3000", new Date(`${date.getFullYear()}-${date.getMonth() +
+                    1}-${date.getDate()} 22:00`))
+                
+                return new Date(
                 `${date.getFullYear()}-${date.getMonth() +
                     1}-${date.getDate()} 22:00`
             );
