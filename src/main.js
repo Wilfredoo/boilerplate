@@ -294,31 +294,31 @@ export class Main extends React.Component {
                                         this.state.events
                                             .filter(data => {
                                                 return (
-                                                    todayConvertedDate ===
+                                                    "2019-10-23T22:00:00.000Z" ===
                                                         toSystemDate(
                                                             new Date(data.date0)
                                                         ).toString() ||
-                                                    todayConvertedDate ===
+                                                    "2019-10-23T22:00:00.000Z" ===
                                                         toSystemDate(
                                                             new Date(data.date1)
                                                         ).toString() ||
-                                                    todayConvertedDate ===
+                                                    "2019-10-23T22:00:00.000Z" ===
                                                         toSystemDate(
                                                             new Date(data.date2)
                                                         ).toString() ||
-                                                    todayConvertedDate ===
+                                                    "2019-10-23T22:00:00.000Z" ===
                                                         toSystemDate(
                                                             new Date(data.date3)
                                                         ).toString() ||
-                                                    todayConvertedDate ===
+                                                    "2019-10-23T22:00:00.000Z" ===
                                                         toSystemDate(
                                                             new Date(data.date4)
                                                         ).toString() ||
-                                                    todayConvertedDate ===
+                                                    "2019-10-23T22:00:00.000Z" ===
                                                         toSystemDate(
                                                             new Date(data.date5)
                                                         ).toString() ||
-                                                    todayConvertedDate ===
+                                                    "2019-10-23T22:00:00.000Z" ===
                                                         toSystemDate(
                                                             new Date(data.date6)
                                                         ).toString()
