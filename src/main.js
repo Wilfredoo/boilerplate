@@ -211,16 +211,18 @@ export class Main extends React.Component {
         }
 
         function toSystemDate(date) {
+            console.log(date)
+
+            console.log("full year", date.getFullYear())
+            console.log("full month", date.getMonth())
+            console.log("get date", date.getDate())
             return new Date(
                 `${date.getFullYear()}-${date.getMonth() +
                     1}-${date.getDate()} 22:00`
             );
         }
 
-        console.log("full year", date.getFullYear)
-        console.log("full month", date.getFullMonth)
-
-        console.log("get date", date.getDate)
+     
 
 
         let todayConvertedDate = toSystemDate(date).toString();
