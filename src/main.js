@@ -231,6 +231,9 @@ export class Main extends React.Component {
         let date11Converted = toSystemDate(date11).toString();
         let date12Converted = toSystemDate(date12).toString();
         let date13Converted = toSystemDate(date13).toString();
+        console.log("before converting today", date);
+        console.log("before converting tomorrow", date1);
+        
 
         console.log("converted today", todayConvertedDate);
         console.log("converted tomorrow", date1Converted);
