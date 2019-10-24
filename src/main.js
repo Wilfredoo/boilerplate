@@ -219,11 +219,11 @@ export class Main extends React.Component {
             console.log("look at me now", `${date.getFullYear()}-${date.getMonth() +
                 1}-${date.getDate()} 22:00`)
                 console.log("look at me now 3000", new Date(`${date.getFullYear()}-${date.getMonth() +
-                    1}-${date.getDate()}:00:00`))
+                    1}-${date.getDate()} 00:00`))
                 
                 return new Date(
                 `${date.getFullYear()}-${date.getMonth() +
-                    1}-${date.getDate()} 22:00`
+                    1}-${date.getDate()}`
             );
         }
 
