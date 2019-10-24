@@ -7,6 +7,13 @@ const passport = require("passport");
 GoogleStrategy = require("passport-google-oauth20").Strategy;
 FacebookStrategy = require("passport-facebook").Strategy;
 
+var forceSsl = function(req, res, next) {
+    if (req.headers["x-forwarded-proto"] !== "https") {
+        return res.redirect(["https://", req.get("Host"), req.url].join(""));
+    }
+    return next();
+};
+
 let callback_URL;
 if (process.env.FACEBOOK_SECRET !== undefined) {
     fbSecret = process.env.FACEBOOK_SECRET;
@@ -19,6 +26,8 @@ app.use(compression());
 app.use(express.static("public"));
 
 if (process.env.NODE_ENV != "production") {
+    app.use(forceSsl);
+
     app.use(
         "/bundle.js",
         require("http-proxy-middleware")({
