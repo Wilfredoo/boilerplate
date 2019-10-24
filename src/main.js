@@ -217,6 +217,12 @@ export class Main extends React.Component {
             );
         }
 
+        console.log("full year", date.getFullYear)
+        console.log("full month", date.getFullMonth)
+
+        console.log("get date", date.getDate)
+
+
         let todayConvertedDate = toSystemDate(date).toString();
         let date1Converted = toSystemDate(date1).toString();
         let date2Converted = toSystemDate(date2).toString();
