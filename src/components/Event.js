@@ -78,6 +78,7 @@ export class Event extends React.Component {
                     {expandEvent && (
                         <div className="hideInWeb">
                             <h2 className="eventTitle">{data.title}</h2>
+                            <div className="divForBorder1" />
                             <table className=" ">
                                 <tr className=" ">
                                     <td className="smallerText where ">
@@ -128,6 +129,7 @@ export class Event extends React.Component {
                                     )}
                                 </tr>
                             </table>
+                            <div className="divForBorder2" />
                         </div>
                     )}
                     {expandEvent2 && (
