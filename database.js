@@ -135,6 +135,7 @@ exports.getEventsBetter = function(from, to) {
             [from, to]
         )
         .then(results => {
+            console.log("where are u event", results.rows);
             return results.rows;
         });
 };

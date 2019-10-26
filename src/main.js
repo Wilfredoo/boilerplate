@@ -62,7 +62,7 @@ export class Main extends React.Component {
         from.setMinutes(0);
         from = from.toISOString();
         let to = new Date(
-            date.getTime() + 14 * 24 * 60 * 60 * 1000
+            date.getTime() + 15 * 24 * 60 * 60 * 1000
         ).toISOString();
 
         await firebase.auth().onAuthStateChanged(user => {
@@ -75,7 +75,7 @@ export class Main extends React.Component {
     getEventsBetter(from, to) {
         axios.get(`/getEventsBetter?from=${from}&to=${to}`).then(result => {
             this.setState({ events: result.data.data }, () => {
-               
+               console.log("is the last event here? friday 8th", this.state.events)
             });
         });
     }
@@ -257,7 +257,7 @@ export class Main extends React.Component {
             "5th",
             "6th",
             "7th",
-            "8th",
+            "8th",  
             "9th",
             "10th",
             "11th",
