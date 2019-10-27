@@ -505,7 +505,8 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
+                                            {console.log("dogs and cats and birds", indexe)}
+                              {indexe === undefined || indexe === 0 && <div><p>no events this day :(</p></div>}
 
 {this.state.showMore1=== "false" && indexe >= 3 && <div onClick={this.showMore1}><p className="showMore">...</p></div>}
                                 </div>
