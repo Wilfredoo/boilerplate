@@ -457,8 +457,7 @@ tr {
     .week2 {
         width: 100%;
         display: flex;
-        position: absolute;
-        bottom: 20%;
+        margin-top: 10%;
     }
 
     .eventsDiv {
