@@ -522,7 +522,7 @@ export class Main extends React.Component {
                                             {console.log("dogs and cats and birds", indexe)}
                               {indexe1 === undefined && <div><p>no events this day :(</p></div>}
 
-{this.state.showMore1=== "false" && indexe >= 3 && <div onClick={this.showMore1}><p className="showMore">...</p></div>}
+{this.state.showMore1=== "false" && indexe1 >= 3 && <div onClick={this.showMore1}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
 
@@ -566,7 +566,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                                 
-                                                indexe = index;
+                                                indexe2 = index;
                                                 if (
                                                     this.state.showMore2 ===
                                                     "true"
@@ -581,7 +581,7 @@ export class Main extends React.Component {
                                                 return <Event data={data} />;
                                             })}
 
-                                {indexe === undefined && <div><p>no events this day :(</p></div>}
+                                {indexe2 === undefined && <div><p>no events this day :(</p></div>}
 
                                     {this.state.showMore2=== "false" && indexe >= 3 && <div onClick={this.showMore2}><p className="showMore">...</p></div>}
                                 </div>
@@ -626,7 +626,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                                
-                                                indexe = index;
+                                                indexe3 = index;
                                                 if (
                                                     this.state.showMore3 ===
                                                     "true"
@@ -640,7 +640,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
+                              {indexe3 === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore3=== "false" && indexe >= 3 && <div onClick={this.showMore3}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
