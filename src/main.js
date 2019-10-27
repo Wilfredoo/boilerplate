@@ -65,10 +65,10 @@ export class Main extends React.Component {
             date.getTime() + 15 * 24 * 60 * 60 * 1000
         ).toISOString();
 
+        this.getEventsBetter(from, to);
         await firebase.auth().onAuthStateChanged(user => {
             this.setState({ isSignedIn: !!user });
         });
-        await this.getEventsBetter(from, to);
 
     }
 
@@ -506,7 +506,7 @@ export class Main extends React.Component {
                                                 return <Event data={data} />;
                                             })}
                                             {console.log("dogs and cats and birds", indexe)}
-                              {indexe === undefined || indexe === 0 && <div><p>no events this day :(</p></div>}
+                              {(indexe === undefined || indexe === 0) && <div><p>no events this day :(</p></div>}
 
 {this.state.showMore1=== "false" && indexe >= 3 && <div onClick={this.showMore1}><p className="showMore">...</p></div>}
                                 </div>
