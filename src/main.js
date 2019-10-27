@@ -445,6 +445,7 @@ export class Main extends React.Component {
                                                 return <Event data={data} />;
                                             })}
 
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore=== "false" && indexe >= 3 && <div onClick={this.showMore}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -504,6 +505,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
 
 {this.state.showMore1=== "false" && indexe >= 3 && <div onClick={this.showMore1}><p className="showMore">...</p></div>}
                                 </div>
@@ -564,6 +566,8 @@ export class Main extends React.Component {
                                                 return <Event data={data} />;
                                             })}
 
+                                {indexe === undefined && <div><p>no events this day :(</p></div>}
+
                                     {this.state.showMore2=== "false" && indexe >= 3 && <div onClick={this.showMore2}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -621,7 +625,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore3=== "false" && indexe >= 3 && <div onClick={this.showMore3}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -679,7 +683,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore4=== "false" && indexe >= 3 && <div onClick={this.showMore4}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -737,7 +741,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore5=== "false" && indexe >= 3 && <div onClick={this.showMore5}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -795,7 +799,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore6=== "false" && indexe >= 3 && <div onClick={this.showMore6}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -859,7 +863,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore7=== "false" && indexe >= 3 && <div onClick={this.showMore7}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -920,7 +924,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore8=== "false" && indexe >= 3 && <div onClick={this.showMore8}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -981,7 +985,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore9=== "false" && indexe >= 3 && <div onClick={this.showMore9}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -1041,7 +1045,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore10=== "false" && indexe >= 3 && <div onClick={this.showMore10}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -1101,7 +1105,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore11=== "false" && indexe >= 3 && <div onClick={this.showMore11}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -1161,7 +1165,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore12=== "false" && indexe >= 3 && <div onClick={this.showMore12}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
@@ -1223,7 +1227,7 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-
+                              {indexe === undefined && <div><p>no events this day :(</p></div>}
                                     {this.state.showMore13=== "false" && indexe >= 3 && <div onClick={this.showMore13}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
