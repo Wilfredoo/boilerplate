@@ -35,7 +35,6 @@ body {
     border-width: 2px;
     color: #00b8a9;
     margin-top: 50px;
-
 }
 
 .berlin {
@@ -379,6 +378,9 @@ tr {
 }
 
 @media (min-width: 1000px) {
+    .noSwing {
+        font-size: 16px;
+    }
     .justTitle {
         font-size: 45px;
     }
@@ -455,6 +457,8 @@ tr {
     .week2 {
         width: 100%;
         display: flex;
+        position: absolute;
+        bottom: 20%;
     }
 
     .eventsDiv {
@@ -505,7 +509,7 @@ tr {
         height: 60px;
         font-size: 25px;
         margin-left: 20px;
-            margin-top: 0px;
+        margin-top: 0px;
     }
 
     .weeks {
