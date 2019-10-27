@@ -339,6 +339,20 @@ export class Main extends React.Component {
         const user = firebase.auth().currentUser;
         let indexe;
         let indexe1;
+        let indexe2;
+        let indexe3;
+        let indexe4;
+        let indexe5;
+        let indexe6;
+        let indexe7;
+        let indexe8;
+        let indexe9;
+        let indexe10;
+        let indexe11;
+        let indexe12;
+        let indexe13;
+
+
 
         return (
             <div className="main">
@@ -491,7 +505,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                               
-                                                indexe = index;
+                                                indexe1 = index;
                                                 if (
                                                     this.state.showMore1 ===
                                                     "true"
@@ -506,7 +520,7 @@ export class Main extends React.Component {
                                                 return <Event data={data} />;
                                             })}
                                             {console.log("dogs and cats and birds", indexe)}
-                              {(indexe === undefined || indexe === 0) && <div><p>no events this day :(</p></div>}
+                              {indexe1 === undefined && <div><p>no events this day :(</p></div>}
 
 {this.state.showMore1=== "false" && indexe >= 3 && <div onClick={this.showMore1}><p className="showMore">...</p></div>}
                                 </div>
