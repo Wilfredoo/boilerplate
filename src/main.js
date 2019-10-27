@@ -583,7 +583,7 @@ export class Main extends React.Component {
 
                                 {indexe2 === undefined && <div><p>no events this day :(</p></div>}
 
-                                    {this.state.showMore2=== "false" && indexe >= 3 && <div onClick={this.showMore2}><p className="showMore">...</p></div>}
+                                    {this.state.showMore2=== "false" && indexe2 >= 3 && <div onClick={this.showMore2}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
                             <div className="dayDiv">
@@ -641,7 +641,7 @@ export class Main extends React.Component {
                                                 return <Event data={data} />;
                                             })}
                               {indexe3 === undefined && <div><p>no events this day :(</p></div>}
-                                    {this.state.showMore3=== "false" && indexe >= 3 && <div onClick={this.showMore3}><p className="showMore">...</p></div>}
+                                    {this.state.showMore3=== "false" && indexe3 >= 3 && <div onClick={this.showMore3}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
                             <div className="dayDiv">
@@ -684,7 +684,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                              
-                                                indexe = index;
+                                                indexe4 = index;
                                                 if (
                                                     this.state.showMore4 ===
                                                     "true"
@@ -698,8 +698,8 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
-                                    {this.state.showMore4=== "false" && indexe >= 3 && <div onClick={this.showMore4}><p className="showMore">...</p></div>}
+                              {indexe4 === undefined && <div><p>no events this day :(</p></div>}
+                                    {this.state.showMore4=== "false" && indexe4 >= 3 && <div onClick={this.showMore4}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
                             <div className="dayDiv">
@@ -742,7 +742,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                              
-                                                indexe = index;
+                                                indexe5 = index;
                                                 if (
                                                     this.state.showMore5 ===
                                                     "true"
@@ -756,8 +756,8 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
-                                    {this.state.showMore5=== "false" && indexe >= 3 && <div onClick={this.showMore5}><p className="showMore">...</p></div>}
+                              {indexe5 === undefined && <div><p>no events this day :(</p></div>}
+                                    {this.state.showMore5=== "false" && indexe5 >= 3 && <div onClick={this.showMore5}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
                             <div className="dayDiv">
@@ -800,7 +800,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                                
-                                                indexe = index;
+                                                indexe6 = index;
                                                 if (
                                                     this.state.showMore6 ===
                                                     "true"
@@ -814,8 +814,8 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
-                                    {this.state.showMore6=== "false" && indexe >= 3 && <div onClick={this.showMore6}><p className="showMore">...</p></div>}
+                              {indexe6 === undefined && <div><p>no events this day :(</p></div>}
+                                    {this.state.showMore6=== "false" && indexe6 >= 3 && <div onClick={this.showMore6}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
                         </div>
@@ -864,7 +864,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                                
-                                                indexe = index;
+                                                indexe7 = index;
                                                 if (
                                                     this.state.showMore7 ===
                                                     "true"
@@ -878,8 +878,8 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
-                                    {this.state.showMore7=== "false" && indexe >= 3 && <div onClick={this.showMore7}><p className="showMore">...</p></div>}
+                              {indexe7 === undefined && <div><p>no events this day :(</p></div>}
+                                    {this.state.showMore7=== "false" && indexe7 >= 3 && <div onClick={this.showMore7}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
 
@@ -925,7 +925,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                                
-                                                indexe = index;
+                                                indexe8 = index;
                                                 if (
                                                     this.state.showMore8 ===
                                                     "true"
@@ -939,8 +939,8 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
-                                    {this.state.showMore8=== "false" && indexe >= 3 && <div onClick={this.showMore8}><p className="showMore">...</p></div>}
+                              {indexe8 === undefined && <div><p>no events this day :(</p></div>}
+                                    {this.state.showMore8=== "false" && indexe8 >= 3 && <div onClick={this.showMore8}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
 
@@ -986,7 +986,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                                
-                                                indexe = index;
+                                                indexe9 = index;
                                                 if (
                                                     this.state.showMore9 ===
                                                     "true"
@@ -1000,8 +1000,8 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
-                                    {this.state.showMore9=== "false" && indexe >= 3 && <div onClick={this.showMore9}><p className="showMore">...</p></div>}
+                              {indexe9 === undefined && <div><p>no events this day :(</p></div>}
+                                    {this.state.showMore9=== "false" && indexe9 >= 3 && <div onClick={this.showMore9}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
                             <div className="dayDiv">
@@ -1046,7 +1046,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                                
-                                                indexe = index;
+                                                indexe10 = index;
                                                 if (
                                                     this.state.showMore10 ===
                                                     "true"
@@ -1060,8 +1060,8 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
-                                    {this.state.showMore10=== "false" && indexe >= 3 && <div onClick={this.showMore10}><p className="showMore">...</p></div>}
+                              {indexe10 === undefined && <div><p>no events this day :(</p></div>}
+                                    {this.state.showMore10=== "false" && indexe10 >= 3 && <div onClick={this.showMore10}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
                             <div className="dayDiv">
@@ -1106,7 +1106,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                                
-                                                indexe = index;
+                                                indexe11 = index;
                                                 if (
                                                     this.state.showMore11 ===
                                                     "true"
@@ -1120,8 +1120,8 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
-                                    {this.state.showMore11=== "false" && indexe >= 3 && <div onClick={this.showMore11}><p className="showMore">...</p></div>}
+                              {indexe11 === undefined && <div><p>no events this day :(</p></div>}
+                                    {this.state.showMore11=== "false" && indexe11 >= 3 && <div onClick={this.showMore11}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
                             <div className="dayDiv">
@@ -1166,7 +1166,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                                
-                                                indexe = index;
+                                                indexe12 = index;
                                                 if (
                                                     this.state.showMore12 ===
                                                     "true"
@@ -1180,8 +1180,8 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
-                                    {this.state.showMore12=== "false" && indexe >= 3 && <div onClick={this.showMore12}><p className="showMore">...</p></div>}
+                              {indexe12 === undefined && <div><p>no events this day :(</p></div>}
+                                    {this.state.showMore12=== "false" && indexe12 >= 3 && <div onClick={this.showMore12}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
                             <div className="dayDiv">
@@ -1228,7 +1228,7 @@ export class Main extends React.Component {
                                             })
                                             .filter((data, index) => {
                                                
-                                                indexe = index;
+                                                indexe13 = index;
                                                 if (
                                                     this.state.showMore13 ===
                                                     "true"
@@ -1242,8 +1242,8 @@ export class Main extends React.Component {
                                             .map(data => {
                                                 return <Event data={data} />;
                                             })}
-                              {indexe === undefined && <div><p>no events this day :(</p></div>}
-                                    {this.state.showMore13=== "false" && indexe >= 3 && <div onClick={this.showMore13}><p className="showMore">...</p></div>}
+                              {indexe13 === undefined && <div><p>no events this day :(</p></div>}
+                                    {this.state.showMore13=== "false" && indexe13 >= 3 && <div onClick={this.showMore13}><p className="showMore">...</p></div>}
                                 </div>
                             </div>
                         </div>
