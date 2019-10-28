@@ -51,6 +51,8 @@ export class Event extends React.Component {
         const { expandEvent } = this.state;
         const { expandEvent2 } = this.state;
         const { data } = this.props;
+        console.log("komodo dragons", this.props);
+        console.log("fairy tales", this.props.day);
 
         return (
             <div className="event" onClick={e => this.expandEvent()}>
@@ -91,7 +93,7 @@ export class Event extends React.Component {
                                 <tr>
                                     <td className="smallerText ">When:</td>
                                     <td>
-                                        {" "}
+                                        {this.props.day} {this.props.daydate} at{" "}
                                         <Moment
                                             className="smallerText"
                                             parse="HH:mm:ss"
@@ -164,6 +166,8 @@ export class Event extends React.Component {
                                         <tr>
                                             <td className="text ">When:</td>
                                             <td className="text ">
+                                                {this.props.day}{" "}
+                                                {this.props.daydate} at{" "}
                                                 <Moment
                                                     className="text"
                                                     parse="HH:mm:ss"
@@ -180,12 +184,6 @@ export class Event extends React.Component {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td className="text ">About:</td>
-                                            <td className="text  descriptionAnswer">
-                                                {data.description}
-                                            </td>
-                                        </tr>
-                                        <tr>
                                             <td className="text ">
                                                 Entry-fee:
                                             </td>
@@ -199,6 +197,12 @@ export class Event extends React.Component {
                                                     {data.price}
                                                 </td>
                                             )}
+                                        </tr>
+                                        <tr>
+                                            <td className="text ">About:</td>
+                                            <td className="text  descriptionAnswer">
+                                                {data.description}
+                                            </td>
                                         </tr>
                                     </table>
                                 </Modal.Body>

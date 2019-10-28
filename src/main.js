@@ -283,9 +283,14 @@ export class Main extends React.Component {
             "31rst"
         ];
 
-        let day = days[date.getDay()];
-        let day1 = days[date.getDay() + 1];
+        let day = "Today";
+        let dayB = days[date.getDay()];
+        
+        let day1 = "Tomorrow";
+        let day1B = days[date.getDay() + 1];
+
         let day2 = days[date.getDay() + 2];
+        
         let day3 = days[date.getDay() + 3];
         let day4 = days[date.getDay() + 4];
         let day5 = days[date.getDay() + 5];
@@ -298,13 +303,7 @@ export class Main extends React.Component {
         let day12 = days[date.getDay() + 12];
         let day13 = days[date.getDay() + 13];
 
-        if (date.getDay() === date.getDay()) {
-            day = "Today";
-        }
 
-        if (date.getDay() + 1 === date.getDay() + 1) {
-            day1 = "Tomorrow";
-        }
 
         function toSystemDate(date) {
 
@@ -456,7 +455,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={dayB} daydate={datees[date.getDate()]}/>;
                                             })}
 
                               {indexe === undefined && <div><p className="noSwing">no swing today :(</p></div>}
@@ -517,7 +516,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day1B} daydate={datees[date1.getDate()]}/>;
                                             })}
                                             {console.log("dogs and cats and birds", indexe)}
                               {indexe1 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
@@ -578,7 +577,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day2} daydate={datees[date2.getDate()]}/>;
                                             })}
 
                                 {indexe2 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
@@ -638,7 +637,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day3} daydate={datees[date3.getDate()]}/>;
                                             })}
                               {indexe3 === undefined && <div><p className="noSwing">no swing this day :(</p></div>}
                                     {this.state.showMore3=== "false" && indexe3 >= 3 && <div onClick={this.showMore3}><p className="showMore">...</p></div>}
@@ -696,7 +695,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day4} daydate={datees[date4.getDate()]}/>;
                                             })}
                               {indexe4 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
                                     {this.state.showMore4=== "false" && indexe4 >= 3 && <div onClick={this.showMore4}><p className="showMore">...</p></div>}
@@ -754,7 +753,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day5} daydate={datees[date5.getDate()]}/>;
                                             })}
                               {indexe5 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
                                     {this.state.showMore5=== "false" && indexe5 >= 3 && <div onClick={this.showMore5}><p className="showMore">...</p></div>}
@@ -812,7 +811,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day6} daydate={datees[date6.getDate()]}/>;
                                             })}
                               {indexe6 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
                                     {this.state.showMore6=== "false" && indexe6 >= 3 && <div onClick={this.showMore6}><p className="showMore">...</p></div>}
@@ -876,7 +875,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day7} daydate={datees[date7.getDate()]}/>;
                                             })}
                               {indexe7 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
                                     {this.state.showMore7=== "false" && indexe7 >= 3 && <div onClick={this.showMore7}><p className="showMore">...</p></div>}
@@ -937,7 +936,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day8} daydate={datees[date8.getDate()]}/>;
                                             })}
                               {indexe8 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
                                     {this.state.showMore8=== "false" && indexe8 >= 3 && <div onClick={this.showMore8}><p className="showMore">...</p></div>}
@@ -998,7 +997,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day9} daydate={datees[date9.getDate()]}/>;
                                             })}
                               {indexe9 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
                                     {this.state.showMore9=== "false" && indexe9 >= 3 && <div onClick={this.showMore9}><p className="showMore">...</p></div>}
@@ -1058,7 +1057,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day10} daydate={datees[date10.getDate()]}/>;
                                             })}
                               {indexe10 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
                                     {this.state.showMore10=== "false" && indexe10 >= 3 && <div onClick={this.showMore10}><p className="showMore">...</p></div>}
@@ -1118,7 +1117,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day11} daydate={datees[date11.getDate()]}/>;
                                             })}
                               {indexe11 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
                                     {this.state.showMore11=== "false" && indexe11 >= 3 && <div onClick={this.showMore11}><p className="showMore">...</p></div>}
@@ -1178,7 +1177,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day12} daydate={datees[date12.getDate()]}/>;
                                             })}
                               {indexe12 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
                                     {this.state.showMore12=== "false" && indexe12 >= 3 && <div onClick={this.showMore12}><p className="showMore">...</p></div>}
@@ -1240,7 +1239,7 @@ export class Main extends React.Component {
                                                 }
                                             })
                                             .map(data => {
-                                                return <Event data={data} />;
+                                                return <Event data={data} day={day13} daydate={datees[date13.getDate()]}/>;
                                             })}
                               {indexe13 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
                                     {this.state.showMore13=== "false" && indexe13 >= 3 && <div onClick={this.showMore13}><p className="showMore">...</p></div>}
