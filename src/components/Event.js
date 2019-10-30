@@ -51,8 +51,8 @@ export class Event extends React.Component {
         const { expandEvent } = this.state;
         const { expandEvent2 } = this.state;
         const { data } = this.props;
-        console.log("komodo dragons", this.props);
-        console.log("fairy tales", this.props.day);
+        // console.log("komodo dragons", this.props);
+        // console.log("fairy tales", this.props.day);
 
         return (
             <div className="event" onClick={e => this.expandEvent()}>

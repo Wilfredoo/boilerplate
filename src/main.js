@@ -1,5 +1,6 @@
 import React from "react";
 import Event from "./components/Event.js";
+import Day from "./components/Day.js";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Moment from "react-moment";
@@ -8,8 +9,6 @@ import { months } from "moment";
 import { DateCondition } from "./components/DateCondition.js";
 import firebase from "./firebase.js";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import Button from "react-bootstrap/Button";
 
 export class Main extends React.Component {
     constructor(props) {
@@ -400,6 +399,10 @@ export class Main extends React.Component {
                 <div className="weeks">
                     {this.state.week === "this" && (
                         <div className="week1">
+                            {/*<div className="dayDiv">
+                            
+                            <Day />
+                    </div>*/}
                             <div className="dayDiv">
                                 <p className=" day">{day}</p>
                                 <div className="eventsDiv">
@@ -713,7 +716,7 @@ export class Main extends React.Component {
                                                         toSystemDate(
                                                             new Date(data.date0)
                                                         ).toString() ||
-                                                    todayConvertedDate ===
+                                                        date5Converted ===
                                                         toSystemDate(
                                                             new Date(data.date1)
                                                         ).toString() ||
