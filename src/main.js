@@ -284,12 +284,9 @@ export class Main extends React.Component {
 
         let day = "Today";
         let dayB = days[date.getDay()];
-        
         let day1 = "Tomorrow";
         let day1B = days[date.getDay() + 1];
-
         let day2 = days[date.getDay() + 2];
-        
         let day3 = days[date.getDay() + 3];
         let day4 = days[date.getDay() + 4];
         let day5 = days[date.getDay() + 5];
@@ -305,10 +302,6 @@ export class Main extends React.Component {
 
 
         function toSystemDate(date) {
-
-         
-            
-                
                 return new Date(
                 `${date.getFullYear()}-${date.getMonth() +
                     1}-${date.getDate()}`
@@ -399,10 +392,10 @@ export class Main extends React.Component {
                 <div className="weeks">
                     {this.state.week === "this" && (
                         <div className="week1">
-                            {/*<div className="dayDiv">
+                            <div className="dayDiv">
                             
-                            <Day />
-                    </div>*/}
+                            <Day day={day} events={this.state.events} convertedDate={todayConvertedDate} />
+                    </div>
                             <div className="dayDiv">
                                 <p className=" day">{day}</p>
                                 <div className="eventsDiv">

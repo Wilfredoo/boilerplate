@@ -1,13 +1,26 @@
 import React from "react";
+import Event from "./components/Event.js";
 
 export class Day extends React.Component {
     constructor(props) {
         super(props);
     }
 
-    render() {
-        console.log("maoris dancing", this.props);
+    showMore() {
+        this.setState({
+            showMore: "true"
+        });
+        this.showMore = this.showMore.bind(this);
+    }
 
+    render() {
+        function toSystemDate(date) {
+            return new Date(
+                `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+            );
+        }
+        console.log("the last of us", this.props);
+        let indexe;
         return (
             <div>
                 <p className=" day">{this.props.day}</p>
@@ -47,30 +60,28 @@ export class Day extends React.Component {
                                 );
                             })
                             .filter((data, index) => {
-                                this.props.indexe = index;
-                                if (this.state.showMore === "true") {
+                                indexe = index;
+                                if (this.props.showMore === "true") {
                                     return index < 30;
                                 } else {
                                     return index < 3;
                                 }
                             })
                             .map(data => {
-                                return (
-                                    <Event
-                                        data={this.props.data}
-                                        day={this.props.dayB}
-                                        daydate={this.props.datees}
-                                    />
-                                );
+                                return <Event
+                                    data={this.props.data}
+                                    day={this.props.dayB}
+                                    daydate={this.props.datees}
+                                />();
                             })}
 
-                    {this.props.indexe === undefined && (
+                    {indexe === undefined && (
                         <div>
                             <p className="noSwing">no swing today :(</p>
                         </div>
                     )}
-                    {this.props.showMore === "false" && this.props.indexe >= 3 && (
-                        <div onClick={this.props.showMore}>
+                    {this.props.showMore === "false" && indexe >= 3 && (
+                        <div onClick={this.showMore}>
                             <p className="showMore">...</p>
                         </div>
                     )}
