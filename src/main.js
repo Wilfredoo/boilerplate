@@ -50,8 +50,6 @@ export class Main extends React.Component {
         this.showMore12 = this.showMore12.bind(this);
         this.showMore13 = this.showMore13.bind(this);
         this.showMore14 = this.showMore14.bind(this);
-
-
     }
 
     async componentDidMount() {
@@ -68,7 +66,6 @@ export class Main extends React.Component {
         await firebase.auth().onAuthStateChanged(user => {
             this.setState({ isSignedIn: !!user });
         });
-
     }
 
     getEventsBetter(from, to) {
@@ -87,17 +84,22 @@ export class Main extends React.Component {
         }
     }
 
+
     showMore() {
         this.setState({
-            showMore: "true"
+            showMore: "true",
+
         });
     }
 
     showMore1() {
         this.setState({
-            showMore1: "true"
+            showMore1: "true",
+
         });
     }
+
+
 
     showMore2() {
         this.setState({
@@ -328,20 +330,6 @@ export class Main extends React.Component {
         
 
         const user = firebase.auth().currentUser;
-        let indexe;
-        let indexe1;
-        let indexe2;
-        let indexe3;
-        let indexe4;
-        let indexe5;
-        let indexe6;
-        let indexe7;
-        let indexe8;
-        let indexe9;
-        let indexe10;
-        let indexe11;
-        let indexe12;
-        let indexe13;
 
 
 
@@ -392,855 +380,52 @@ export class Main extends React.Component {
                 <div className="weeks">
                     {this.state.week === "this" && (
                         <div className="week1">
-                            <div className="dayDiv">
-                            
-                            <Day day={day} events={this.state.events} convertedDate={todayConvertedDate} />
-                    </div>
-                            <div className="dayDiv">
-                                <p className=" day">{day}</p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    todayConvertedDate ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    todayConvertedDate ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    todayConvertedDate ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    todayConvertedDate ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    todayConvertedDate ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    todayConvertedDate ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    todayConvertedDate ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                                console.log(
-                                                    "look retriever",
-                                                    index
-                                                );
-                                                indexe = index;
-                                                if (
-                                                    this.state.showMore ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={dayB} daydate={datees[date.getDate()]}/>;
-                                            })}
-
-                              {indexe === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-                                    {this.state.showMore=== "false" && indexe >= 3 && <div onClick={this.showMore}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-
-                            <div className="dayDiv">
-                                <p className=" day">{day1}</p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-
-                                                return (
-                                                    date1Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date1Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date1Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date1Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date1Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date1Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date1Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                              
-                                                indexe1 = index;
-                                                if (
-                                                    this.state.showMore1 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day1B} daydate={datees[date1.getDate()]}/>;
-                                            })}
-                                            {console.log("dogs and cats and birds", indexe)}
-                              {indexe1 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-
-{this.state.showMore1=== "false" && indexe1 >= 3 && <div onClick={this.showMore1}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-
-                            <div className="dayDiv">
-                                <p className=" day">{day2}</p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date2Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date2Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date2Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date2Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date2Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date2Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date2Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                                
-                                                indexe2 = index;
-                                                if (
-                                                    this.state.showMore2 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day2} daydate={datees[date2.getDate()]}/>;
-                                            })}
-
-                                {indexe2 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-
-                                    {this.state.showMore2=== "false" && indexe2 >= 3 && <div onClick={this.showMore2}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-                            <div className="dayDiv">
-                                <p className=" day">{day3}</p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date3Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date3Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date3Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date3Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date3Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date3Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date3Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                               
-                                                indexe3 = index;
-                                                if (
-                                                    this.state.showMore3 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day3} daydate={datees[date3.getDate()]}/>;
-                                            })}
-                              {indexe3 === undefined && <div><p className="noSwing">no swing this day :(</p></div>}
-                                    {this.state.showMore3=== "false" && indexe3 >= 3 && <div onClick={this.showMore3}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-                            <div className="dayDiv">
-                                <p className=" day">{day4}</p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date4Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date4Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date4Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date4Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date4Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date4Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date4Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                             
-                                                indexe4 = index;
-                                                if (
-                                                    this.state.showMore4 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day4} daydate={datees[date4.getDate()]}/>;
-                                            })}
-                              {indexe4 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-                                    {this.state.showMore4=== "false" && indexe4 >= 3 && <div onClick={this.showMore4}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-                            <div className="dayDiv">
-                                <p className=" day">{day5}</p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date5Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                        date5Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date5Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date5Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date5Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date5Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date5Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                             
-                                                indexe5 = index;
-                                                if (
-                                                    this.state.showMore5 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day5} daydate={datees[date5.getDate()]}/>;
-                                            })}
-                              {indexe5 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-                                    {this.state.showMore5=== "false" && indexe5 >= 3 && <div onClick={this.showMore5}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-                            <div className="dayDiv">
-                                <p className=" day">{day6}</p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date6Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date6Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date6Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date6Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date6Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date6Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date6Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                               
-                                                indexe6 = index;
-                                                if (
-                                                    this.state.showMore6 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day6} daydate={datees[date6.getDate()]}/>;
-                                            })}
-                              {indexe6 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-                                    {this.state.showMore6=== "false" && indexe6 >= 3 && <div onClick={this.showMore6}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
+                        <div className="dayDiv">
+                            <Day  showMoreFunction={this.showMore} showMore={this.state.showMore} day={day} dayDay={dayB} events={this.state.events} convertedDate={todayConvertedDate} daydate={datees[date.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore1} showMore={this.state.showMore1} day={day1} dayDay={day1B} events={this.state.events} convertedDate={date1Converted} daydate={datees[date1.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore2} showMore={this.state.showMore2} day={day2} dayDay={day2} events={this.state.events} convertedDate={date2Converted} daydate={datees[date2.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore3} showMore={this.state.showMore3} day={day3} dayDay={day3} events={this.state.events} convertedDate={date3Converted} daydate={datees[date3.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore4} showMore={this.state.showMore4} day={day4} dayDay={day4} events={this.state.events} convertedDate={date4Converted} daydate={datees[date4.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore5} showMore={this.state.showMore5} day={day5} dayDay={day5} events={this.state.events} convertedDate={date5Converted} daydate={datees[date5.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore6} showMore={this.state.showMore6} day={day6} dayDay={day6} events={this.state.events} convertedDate={date6Converted} daydate={datees[date6.getDate()]}/>
+                        </div>
                         </div>
                     )}
                     {this.state.week === "next" && (
                         <div className="week2">
                             <div className="dayDiv">
-                                <p className=" day">
-                                    {day7} {datees[date7.getDate()]}
-                                </p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date7Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date7Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date7Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date7Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date7Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date7Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date7Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                               
-                                                indexe7 = index;
-                                                if (
-                                                    this.state.showMore7 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day7} daydate={datees[date7.getDate()]}/>;
-                                            })}
-                              {indexe7 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-                                    {this.state.showMore7=== "false" && indexe7 >= 3 && <div onClick={this.showMore7}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-
-                            <div className="dayDiv">
-                                <p className=" day">
-                                    {day8} {datees[date8.getDate()]}
-                                </p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date8Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date8Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date8Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date8Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date8Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date8Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date8Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                               
-                                                indexe8 = index;
-                                                if (
-                                                    this.state.showMore8 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day8} daydate={datees[date8.getDate()]}/>;
-                                            })}
-                              {indexe8 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-                                    {this.state.showMore8=== "false" && indexe8 >= 3 && <div onClick={this.showMore8}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-
-                            <div className="dayDiv">
-                                <p className=" day">
-                                    {day9} {datees[date9.getDate()]}
-                                </p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date9Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date9Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date9Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date9Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date9Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date9Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date9Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                               
-                                                indexe9 = index;
-                                                if (
-                                                    this.state.showMore9 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day9} daydate={datees[date9.getDate()]}/>;
-                                            })}
-                              {indexe9 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-                                    {this.state.showMore9=== "false" && indexe9 >= 3 && <div onClick={this.showMore9}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-                            <div className="dayDiv">
-                                <p className=" day">
-                                    {day10} {datees[date10.getDate()]}
-                                </p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date10Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date10Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date10Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date10Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date10Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date10Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date10Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                               
-                                                indexe10 = index;
-                                                if (
-                                                    this.state.showMore10 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day10} daydate={datees[date10.getDate()]}/>;
-                                            })}
-                              {indexe10 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-                                    {this.state.showMore10=== "false" && indexe10 >= 3 && <div onClick={this.showMore10}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-                            <div className="dayDiv">
-                                <p className=" day">
-                                    {day11} {datees[date11.getDate()]}
-                                </p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date11Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date11Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date11Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date11Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date11Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date11Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date11Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                               
-                                                indexe11 = index;
-                                                if (
-                                                    this.state.showMore11 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day11} daydate={datees[date11.getDate()]}/>;
-                                            })}
-                              {indexe11 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-                                    {this.state.showMore11=== "false" && indexe11 >= 3 && <div onClick={this.showMore11}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-                            <div className="dayDiv">
-                                <p className=" day">
-                                    {day12} {datees[date12.getDate()]}
-                                </p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date12Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date12Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date12Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date12Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date12Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date12Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date12Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                               
-                                                indexe12 = index;
-                                                if (
-                                                    this.state.showMore12 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day12} daydate={datees[date12.getDate()]}/>;
-                                            })}
-                              {indexe12 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-                                    {this.state.showMore12=== "false" && indexe12 >= 3 && <div onClick={this.showMore12}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
-                            <div className="dayDiv">
-                                <p
-                                    className="
-                                 day">
-                                    {day13} {datees[date13.getDate()]}
-                                </p>
-                                <div className="eventsDiv">
-                                    {this.state.events &&
-                                        this.state.events
-                                            .filter(data => {
-
-                                                return (
-                                                    date13Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date0)
-                                                        ).toString() ||
-                                                    date13Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date1)
-                                                        ).toString() ||
-                                                    date13Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date2)
-                                                        ).toString() ||
-                                                    date13Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date3)
-                                                        ).toString() ||
-                                                    date13Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date4)
-                                                        ).toString() ||
-                                                    date13Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date5)
-                                                        ).toString() ||
-                                                    date13Converted ===
-                                                        toSystemDate(
-                                                            new Date(data.date6)
-                                                        ).toString()
-                                                );
-                                            })
-                                            .filter((data, index) => {
-                                               
-                                                indexe13 = index;
-                                                if (
-                                                    this.state.showMore13 ===
-                                                    "true"
-                                                ) {
-                                                    return index < 30;
-                                                } else {
-                                                    return index < 3;
-
-                                                }
-                                            })
-                                            .map(data => {
-                                                return <Event data={data} day={day13} daydate={datees[date13.getDate()]}/>;
-                                            })}
-                              {indexe13 === undefined && <div><p className="noSwing">no swing today :(</p></div>}
-                                    {this.state.showMore13=== "false" && indexe13 >= 3 && <div onClick={this.showMore13}><p className="showMore">...</p></div>}
-                                </div>
-                            </div>
+                            <Day showMoreFunction={this.showMore7} showMore={this.state.showMore7} day={day7} dayDay={day7} events={this.state.events} convertedDate={date7Converted} daydate={datees[date7.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore8} showMore={this.state.showMore8} day={day8} dayDay={day8} events={this.state.events} convertedDate={date8Converted} daydate={datees[date8.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore9} showMore={this.state.showMore9} day={day9} dayDay={day9} events={this.state.events} convertedDate={date9Converted} daydate={datees[date9.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore10} showMore={this.state.showMore10} day={day10} dayDay={day10} events={this.state.events} convertedDate={date10Converted} daydate={datees[date10.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore11} showMore={this.state.showMore11} day={day11} dayDay={day11} events={this.state.events} convertedDate={date11Converted} daydate={datees[date11.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore12} showMore={this.state.showMore12} day={day12} dayDay={day12} events={this.state.events} convertedDate={date12Converted} daydate={datees[date12.getDate()]}/>
+                        </div>
+                        <div className="dayDiv">
+                            <Day showMoreFunction={this.showMore13} showMore={this.state.showMore13} day={day13} dayDay={day13} events={this.state.events} convertedDate={date13Converted} daydate={datees[date13.getDate()]}/>
+                        </div>
                         </div>
                     )}
                   

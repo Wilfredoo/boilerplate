@@ -1,5 +1,5 @@
 import React from "react";
-import Event from "./components/Event.js";
+import Event from "./Event.js";
 
 export class Day extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ export class Day extends React.Component {
                 `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
             );
         }
-        console.log("the last of us", this.props);
+        // console.log("the last of us", this.props);
         let indexe;
         return (
             <div>
@@ -68,12 +68,16 @@ export class Day extends React.Component {
                                 }
                             })
                             .map(data => {
-                                return <Event
-                                    data={this.props.data}
-                                    day={this.props.dayB}
-                                    daydate={this.props.datees}
-                                />();
+                                return (
+                                    <Event
+                                        data={data}
+                                        day={this.props.dayDay}
+                                        daydate={this.props.daydate}
+                                    />
+                                );
                             })}
+                    {/* {console.log("harry pora", indexe)}
+                    {console.log("hermione", this.props.showMore)} */}
 
                     {indexe === undefined && (
                         <div>
@@ -81,7 +85,7 @@ export class Day extends React.Component {
                         </div>
                     )}
                     {this.props.showMore === "false" && indexe >= 3 && (
-                        <div onClick={this.showMore}>
+                        <div onClick={this.props.showMoreFunction}>
                             <p className="showMore">...</p>
                         </div>
                     )}
